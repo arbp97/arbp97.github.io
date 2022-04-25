@@ -51,8 +51,13 @@ a.button {
   color: initial;
   border: 1px solid black;
   padding: 5px 5px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+a.button.active {
+  background-color: blue;
 }
 
 .header-logo {

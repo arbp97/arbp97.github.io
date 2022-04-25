@@ -11,17 +11,33 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="js/app.js" defer></script>
+    <script src="js/app.js" type="module" defer></script>
   </head>
   <body>
     <header>
       <div class="header-logo"></div>
       <nav>
-        <a class="button" href="javascript:goTo('projects')">Proyectos</a>
-        <a class="button" href="javascript:goTo('skills')">Habilidades</a>
-        <a class="button" href="javascript:goTo('about')">Sobre Mi</a>
-        <a class="button" href="javascript:goTo('contact')">Contacto</a>
+        <a id="projects-button" class="button"
+          ><li class="fa fa-project-diagram"></li>
+          Proyectos</a
+        >
+        <a id="skills-button" class="button"
+          ><li class="fa fa-diagnoses"></li>
+          Habilidades</a
+        >
+        <a id="about-button" class="button"
+          ><li class="fa fa-user"></li>
+          Sobre Mi</a
+        >
+        <a id="contact-button" class="button"
+          ><li class="fa fa-contact-card"></li>
+          Contacto</a
+        >
       </nav>
     </header>
     <main>
