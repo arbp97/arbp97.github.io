@@ -5,11 +5,17 @@
 }
 
 :root {
-  --light-text-shadow: 0 0 15px rgba(0,0,0,.2), 0 0 10px rgba(0,0,0,.2);
+  --light-text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
+  --rich-black-fogra-29: #0d1821ff;
+  --indigo-dye: #344966ff;
+  --silver: #bfc0c0ff;
+  --copper: #c47335ff;
+  --sage: #bfcc94ff;
 }
 
 body {
   height: 150vh;
+  background-color: var(--rich-black-fogra-29);
 }
 
 main {
@@ -18,6 +24,7 @@ main {
   margin-left: 5%;
   margin-top: 100px;
   background-color: black;
+  box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 #contact,
@@ -35,7 +42,8 @@ header {
   position: fixed;
   top: 0;
   display: flex;
-  background-color: black;
+  background-color: var(--rich-black-fogra-29);
+  border-bottom: 5px groove var(--copper);
 }
 
 nav.header-right {
@@ -44,13 +52,13 @@ nav.header-right {
   justify-content: end;
   align-items: end;
   column-gap: 15px;
-  background-color: lightblue;
+  background-color: inherit;
   width: 75%;
   padding: 10px 10px;
 }
 
 .header-left {
-  background-color: lightblue;
+  background-color: inherit;
   width: 25%;
   display: flex;
   flex-direction: row;
@@ -67,17 +75,20 @@ nav.header-right {
   display: flex;
   flex-direction: column;
   row-gap: 1px;
+  color: var(--sage);
 }
 
 p.logo-name {
   font-weight: bold;
   font-size: 20px;
   text-shadow: var(--light-text-shadow);
+  transition: all 0.15s;
 }
 
 p.logo-description {
   font-size: 16px;
   text-shadow: var(--light-text-shadow);
+  transition: all 0.15s;
 }
 
 a.button {
@@ -85,7 +96,7 @@ a.button {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  color: initial;
+  color: var(--sage);
   border: 1px solid black;
   padding: 5px 5px;
   font-size: 14px;
@@ -94,6 +105,7 @@ a.button {
   flex-direction: row;
   column-gap: 5px;
   min-width: fit-content;
+  transition: all 0.15s;
 }
 
 a.button.active {
@@ -130,34 +142,25 @@ a.button.active {
     align-items: center;
     justify-content: center;
   }
-  p.logo-name {font-size: 14px;}
-  p.logo-description {font-size: 10px;}
+  p.logo-name {
+    font-size: 14px;
+  }
+  p.logo-description {
+    font-size: 10px;
+  }
   nav.header-right {
     width: 65%;
   }
-  .header-left { width: 35%;}
+  .header-left {
+    width: 35%;
+  }
 }
 
-.box-about {
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-}
-
-.box-contact {
-  width: 100%;
-  height: 100%;
-  background-color: green;
-}
-
+.box-about,
+.box-contact,
+.box-projects,
 .box-skills {
   width: 100%;
   height: 100%;
-  background-color: darkred;
-}
-
-.box-projects {
-  width: 100%;
-  height: 100%;
-  background-color: gray;
+  background-color: var(--indigo-dye);
 }
