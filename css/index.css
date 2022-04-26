@@ -15,7 +15,7 @@
 
 body {
   height: 150vh;
-  background-color: var(--rich-black-fogra-29);
+  background-color: var(--sage);
 }
 
 main {
@@ -23,8 +23,7 @@ main {
   width: 90%;
   margin-left: 5%;
   margin-top: 100px;
-  background-color: black;
-  box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
 }
 
 #contact,
@@ -64,6 +63,7 @@ nav.header-right {
   flex-direction: row;
   align-items: center;
   padding-left: 10px;
+  column-gap: 5px;
 }
 
 .header-left > img {
@@ -85,6 +85,14 @@ p.logo-name {
   transition: all 0.15s;
 }
 
+p.logo-name::before {
+  content: "ALAN BLANGILLE";
+}
+
+p.logo-description::before {
+  content: "Desarrollador";
+}
+
 p.logo-description {
   font-size: 16px;
   text-shadow: var(--light-text-shadow);
@@ -96,9 +104,12 @@ a.button {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  color: var(--sage);
-  border: 1px solid black;
-  padding: 5px 5px;
+  color: var(--rich--fogra-29);
+  background-color: var(--indigo-dye);
+  border-radius: 5px;
+  border: 1px solid var(--indigo-dye);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+  padding: 10px 10px;
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -109,7 +120,7 @@ a.button {
 }
 
 a.button.active {
-  background-color: blue;
+  background-color: var(--copper);
 }
 
 #projects-button-text::before {
@@ -156,11 +167,23 @@ a.button.active {
   }
 }
 
+@media screen and (max-width: 420px) {
+  p.logo-description::before {
+    content: "";
+  }
+  p.logo-name::before {
+    content: "";
+  }
+  a.button {
+    padding: 5px 5px;
+  }
+}
+
 .box-about,
 .box-contact,
 .box-projects,
 .box-skills {
   width: 100%;
   height: 100%;
-  background-color: var(--indigo-dye);
+  background-color: var(--rich-black-fogra-29);
 }
