@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  height: 80%;
+  height: 85%;
   width: 80%;
   margin-left: 10%;
   margin-top: 32px;
@@ -29,7 +29,7 @@ header {
   width: 100%;
   height: 90px;
   display: flex;
-  justify-content: space-between;
+  background-color: black;
 }
 
 nav {
@@ -38,9 +38,14 @@ nav {
   justify-content: end;
   align-items: end;
   column-gap: 15px;
-  background-color: red;
-  width: 50%;
+  background-color: lightblue;
+  width: 75%;
   padding: 10px 10px;
+}
+
+.header-logo {
+  background-color: red;
+  width: 25%;
 }
 
 a.button {
@@ -54,15 +59,46 @@ a.button {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  min-width: fit-content;
 }
 
 a.button.active {
   background-color: blue;
 }
 
-.header-logo {
-  background-color: red;
-  width: 50%;
+#projects-button-text::before {
+  content: "Proyectos";
+}
+
+#skills-button-text::before {
+  content: "Habilidades";
+}
+
+#about-button-text::before {
+  content: "Sobre Mi";
+}
+
+#contact-button-text::before {
+  content: "Contacto";
+}
+
+@media screen and (max-width: 768px) {
+  #projects-button-text::before,
+  #skills-button-text::before,
+  #about-button-text::before,
+  #contact-button-text::before {
+    content: "";
+  }
+  a.button {
+    column-gap: 0;
+  }
+  nav {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .box-about {

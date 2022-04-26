@@ -1,13 +1,13 @@
-import { setActive, removeActive } from "../js/util.js";
+import * as Util from "../js/util.js";
 
 // routing function
 function goTo(sectionId) {
   Array.from(document.querySelectorAll("main>section")).forEach((section) => {
     section.style.display = "none";
-    removeActive(section.id + "-button");
+    Util.removeActive(section.id + "-button");
   });
   document.getElementById(sectionId).style.display = "flex";
-  setActive(sectionId + "-button");
+  Util.setActive(sectionId + "-button");
 }
 
 // default route
@@ -23,3 +23,8 @@ Array.from(document.querySelectorAll("main>section")).forEach((section) => {
     false
   );
 });
+
+// when starting width is close to mobile width
+if (window.innerWidth <= 768) Util.resizeNavButtons();
+// nav button dynamic resizing
+window.onresize = Util.resizeNavButtons;
