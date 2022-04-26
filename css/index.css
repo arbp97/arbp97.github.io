@@ -4,6 +4,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+:root {
+  --light-text-shadow: 0 0 15px rgba(0,0,0,.2), 0 0 10px rgba(0,0,0,.2);
+}
+
 body {
   height: 150vh;
 }
@@ -68,10 +72,12 @@ nav.header-right {
 p.logo-name {
   font-weight: bold;
   font-size: 20px;
+  text-shadow: var(--light-text-shadow);
 }
 
 p.logo-description {
   font-size: 16px;
+  text-shadow: var(--light-text-shadow);
 }
 
 a.button {
