@@ -5,6 +5,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+body {
+  height: 100vh;
+  background-color: var(--sage);
+}
+
 /* VARIABLES */
 :root {
   --light-text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
@@ -13,11 +18,6 @@
   --silver: #bfc0c0ff;
   --copper: #c47335ff;
   --sage: #bfcc94ff;
-}
-
-body {
-  height: 150vh;
-  background-color: var(--sage);
 }
 
 /* HEADER */
@@ -141,7 +141,7 @@ main {
 #projects {
   justify-content: center;
   align-items: center;
-  height: fit-content;
+  height: 100%;
 }
 
 .box-about,
@@ -162,25 +162,29 @@ main {
 /* PROJECT CAROUSEL */
 .box-slider {
   width: 90%;
-  height: 50%;
   padding-top: 20px;
+  height: 100%;
 }
 
 .splide__slide {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.splide__slide > div {
-  padding: 5px 5px;
+.splide__slide > .project-description {
   text-align: center;
   color: var(--sage);
-  height: 20%;
+}
+.splide__slide > .project-title {
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: var(--sage);
 }
 
-.splide__slide > img {
+.splide__slide__container > img {
   width: 100%;
-  height: 80%;
+  height: 85%;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -218,7 +222,16 @@ main {
     width: 35%;
   }
   .splide__slide {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+  }
+  .splide__slide > .project-description {
+    padding-top: 20px;
+  }
+  .splide__slide > .project-title {
+    padding-top: 5px;
+  }
+  #projects {
+    height: fit-content;
   }
 }
 
