@@ -42,7 +42,7 @@ header {
   top: 0;
   display: flex;
   background-color: var(--rich-black-fogra-29);
-  border-bottom: 5px groove var(--copper);
+  border-bottom: 5px solid var(--sage);
 }
 
 nav.header-right {
@@ -50,10 +50,8 @@ nav.header-right {
   flex-direction: row;
   justify-content: end;
   align-items: end;
-  column-gap: 15px;
   background-color: inherit;
   width: 75%;
-  padding: 10px 10px;
 }
 
 .header-left {
@@ -104,11 +102,8 @@ a.button {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  color: var(--rich--fogra-29);
-  background-color: var(--indigo-dye);
-  border-radius: 5px;
-  border: 1px solid var(--indigo-dye);
-  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+  color: var(--sage);
+  background-color: var(--rich-black-fogra-29);
   padding: 10px 10px;
   font-size: 14px;
   cursor: pointer;
@@ -120,7 +115,8 @@ a.button {
 }
 
 a.button.active {
-  background-color: var(--copper);
+  background-color: var(--sage);
+  color: var(--rich-black-fogra-29);
 }
 
 #projects-button-text::before {
@@ -175,7 +171,7 @@ a.button.active {
     content: "";
   }
   a.button {
-    padding: 5px 5px;
+    padding: 5px 10px;
   }
 }
 
