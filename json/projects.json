@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Test Project Json 1",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non ex blanditiis corrupti illo voluptate explicabo minima, natus adipisci commodi atque consequatur iusto incidunt. Nobis deserunt reiciendis ad tempore doloribus.",
+        "file": "project-default.jpg"
+    },
+    {
+        "name": "Test Project Json 2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non ex blanditiis corrupti illo voluptate explicabo minima, natus adipisci commodi atque consequatur iusto incidunt. Nobis deserunt reiciendis ad tempore doloribus.",
+        "file": "skill-default.png"
+    }
+]
