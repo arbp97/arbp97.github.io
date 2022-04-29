@@ -14,6 +14,7 @@ body {
 :root {
   --light-text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
   --rich-black-fogra-29: #0d1821ff;
+  --rich-black-fogra-32: rgb(14, 20, 26);
   --indigo-dye: #344966ff;
   --silver: #bfc0c0ff;
   --copper: #c47335ff;
@@ -154,6 +155,42 @@ main {
   justify-content: center;
 }
 
+.box-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.box-about > img {
+  width: 20%;
+  height: fit-content;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.7);
+  border: 5px solid var(--rich-black-fogra-32);
+}
+
+.about-me {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 50px 30px;
+}
+
+.about-me-title {
+  color: var(--sage);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-me-text {
+  color: var(--sage);
+  font-size: 16px;
+  line-height: 2;
+}
+
 /* PROJECT CAROUSEL */
 .box-slider {
   width: 90%;
@@ -230,6 +267,22 @@ main {
   }
   .header-left {
     width: 35%;
+  }
+
+  .box-about {
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
+  .box-about > img {
+    width: 60%;
+    align-self: center;
+  }
+  .about-me {
+    width: 90%;
+    padding: 50px 10px;
+  }
+  #about {
+    height: fit-content;
   }
 }
 
