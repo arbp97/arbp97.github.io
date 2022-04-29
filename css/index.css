@@ -132,13 +132,8 @@ main {
 
 #contact,
 #about,
+#projects,
 #skills {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-#projects {
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -184,9 +179,8 @@ main {
 
 .splide__slide__container > img {
   width: 100%;
-  height: 85%;
-  border-radius: 20px;
-  aspect-ratio: 19 / 9;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;
 }
 
 /* RESPONSIVE RESIZES */
@@ -205,6 +199,9 @@ main {
   }
   .splide__slide > .project-title {
     padding-top: 5px;
+  }
+  .box-slider {
+    width: 100%;
   }
   #projects {
     height: fit-content;

@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     gap: "1rem",
     height: "50vh",
     breakpoints: {
-      768: {
+      900: {
         direction: "ttb",
         perPage: 2,
         pagination: false,
-        height: "100vh",
+        height: "fit-content",
       },
     },
   }).mount();
