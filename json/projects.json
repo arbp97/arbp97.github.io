@@ -1,12 +1,12 @@
 [
     {
-        "name": "Test Project Json 1",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non ex blanditiis corrupti illo voluptate explicabo minima, natus adipisci commodi atque consequatur iusto incidunt. Nobis deserunt reiciendis ad tempore doloribus.",
-        "file": "project-default.jpg"
+        "name": "Saint Patrick Homebanking",
+        "description": "Aplicacion Web enfocada en el manejo de informacion de cuentas y transferencias de dinero en una billetera virtual. Tecnologias: React, Redux, Vite, Node, Express, MongoDB.",
+        "file": "saint-patrick.png"
     },
     {
-        "name": "Test Project Json 2",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non ex blanditiis corrupti illo voluptate explicabo minima, natus adipisci commodi atque consequatur iusto incidunt. Nobis deserunt reiciendis ad tempore doloribus.",
-        "file": "skill-default.png"
+        "name": "E-Commerce Web Page",
+        "description": "Pagina Web destinada a la compra y venta de productos y seguimiento de envios. Tecnologias: Java Spring, Bootstrap, MySQL",
+        "file": "java-crud.png"
     }
 ]
