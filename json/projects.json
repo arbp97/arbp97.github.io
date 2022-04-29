@@ -1,12 +1,26 @@
 [
     {
         "name": "Saint Patrick Homebanking",
-        "description": "Aplicacion Web enfocada en el manejo de informacion de cuentas y transferencias de dinero en una billetera virtual. Tecnologias: React, Redux, Vite, Node, Express, MongoDB.",
-        "file": "saint-patrick.png"
+        "description": "Aplicacion Web enfocada en el manejo de informacion de cuentas y transferencias de dinero en una billetera virtual. Tecnologias: React, Redux, Vite, Node, Express, MongoDB",
+        "file": "saint-patrick.png",
+        "link": "https://github.com/HomeBacking"
     },
     {
         "name": "E-Commerce Web Page",
         "description": "Pagina Web destinada a la compra y venta de productos y seguimiento de envios. Tecnologias: Java Spring, Bootstrap, MySQL",
-        "file": "java-crud.png"
+        "file": "java-crud.png",
+        "link": "https://github.com/arbp97/sales-crud"
+    },
+    {
+        "name": "BTree View",
+        "description": "Aplicacion de escritorio que permite construir y visualizar arboles binarios, con sus metodos de ordenamiento y balanceo AVL. Tecnologias: C, GTK3",
+        "file": "btree-view.png",
+        "link": "https://github.com/arbp97/btree-view"
+    },
+    {
+        "name": "Simple Text Editor",
+        "description": "Editor de texto con funciones basicas como abrir, editar, guardar archivos; modificar el estilo y tamaño de la fuente. Tecnologias: Java, Swing",
+        "file": "text-editor.png",
+        "link": "https://github.com/arbp97/java-text-editor"
     }
 ]

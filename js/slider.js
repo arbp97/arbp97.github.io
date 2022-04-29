@@ -9,7 +9,7 @@ async function loadProjects() {
     let splideSlide = document.createElement("li");
     let splideContainer = document.createElement("div");
     let image = document.createElement("img");
-    let title = document.createElement("p");
+    let title = document.createElement("a");
     let description = document.createElement("div");
 
     // set classes and attributes
@@ -18,6 +18,7 @@ async function loadProjects() {
     image.setAttribute("src", "img/" + project.file);
     image.setAttribute("alt", "project-img");
     title.classList.add("project-title");
+    title.setAttribute("href", project.link);
     title.textContent = project.name;
     description.classList.add("project-description");
     description.textContent = project.description;
