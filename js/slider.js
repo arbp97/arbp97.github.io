@@ -1,7 +1,7 @@
 // fetch project data from json file, append every
 // instance in project slider
 async function loadProjects() {
-  const data = await fetch("json/projects.json");
+  const data = await fetch("../portfolio/json/projects.json");
   const list = await data.json();
 
   list.forEach((project) => {
