@@ -331,6 +331,7 @@ main {
   #about-info {
     width: 90%;
     margin-left: 10px;
+    margin-bottom: 20px;
   }
   #about {
     height: fit-content;

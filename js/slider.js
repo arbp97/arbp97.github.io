@@ -1,7 +1,7 @@
 // fetch project data from json file, append every
 // instance in project slider
 async function loadProjects() {
-  const data = await fetch("../portfolio/json/projects.json");
+  const data = await fetch("/json/projects.json");
   const list = await data.json();
 
   list.forEach((project) => {
@@ -34,21 +34,21 @@ async function loadProjects() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
-  //load projects before initializing splide
-  await loadProjects();
+//load projects before initializing splide
+loadProjects();
 
-  new Splide("#project-slider", {
-    perPage: 2,
-    gap: "1rem",
-    height: "50vh",
-    breakpoints: {
-      900: {
-        direction: "ttb",
-        perPage: 2,
-        pagination: false,
-        height: "fit-content",
-      },
+new Splide("#project-slider", {
+  perPage: 2,
+  gap: "1rem",
+  height: "50vh",
+  breakpoints: {
+    900: {
+      direction: "ttb",
+      perPage: 2,
+      pagination: false,
+      arrows: false,
+      drag: false,
+      height: "fit-content",
     },
-  }).mount();
-});
+  },
+}).mount();
