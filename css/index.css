@@ -334,6 +334,7 @@ main {
   }
   #about {
     height: fit-content;
+    padding-bottom: 20px;
   }
   #contact-media-grid {
     grid-template-columns: 1fr 1fr 1fr;
