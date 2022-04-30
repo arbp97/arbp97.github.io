@@ -402,6 +402,8 @@ main {
     align-self: center;
   }
   #about-info {
+    width: 90%;
+    margin-left: 10px;
     margin-bottom: 20px;
   }
   #contact-media-grid {
