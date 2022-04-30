@@ -334,6 +334,14 @@ main {
     height: fit-content;
     padding-bottom: 20px;
   }
+  #about {
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+  #skills {
+    height: fit-content;
+    padding-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -372,10 +380,6 @@ main {
     margin-left: 10px;
     margin-bottom: 20px;
   }
-  #about {
-    height: fit-content;
-    padding-bottom: 20px;
-  }
   #contact-media-grid {
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 0;
@@ -385,9 +389,6 @@ main {
   }
   .box-contact {
     align-items: center;
-  }
-  #skills {
-    height: fit-content;
   }
 }
 
