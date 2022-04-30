@@ -25,7 +25,7 @@ Array.from(document.querySelectorAll("main>section")).forEach((section) => {
   );
 });
 
-// load tab content
+// load section contents
 document.addEventListener("DOMContentLoaded", async function () {
   //load data to sections
   await Section.loadMediaLinks();
