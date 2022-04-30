@@ -131,6 +131,18 @@ main {
   margin-top: 100px;
 }
 
+.section-title {
+  color: var(--sage);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-text {
+  color: var(--sage);
+  font-size: 16px;
+  line-height: 2;
+}
+
 #contact,
 #about,
 #projects,
@@ -150,17 +162,7 @@ main {
   background-color: var(--rich-black-fogra-29);
 }
 
-.box-projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.box-projects .section-title {
-  margin-top: 50px;
-}
-
+/* CONTACT */
 .box-contact {
   display: flex;
   flex-direction: column;
@@ -206,6 +208,7 @@ main {
   border-radius: 5px;
 }
 
+/* ABOUT */
 .box-about {
   display: flex;
   flex-direction: row;
@@ -230,19 +233,26 @@ main {
   margin-top: 50px;
 }
 
-.section-title {
-  color: var(--sage);
-  font-size: 24px;
-  font-weight: bold;
+/* SKILLS */
+
+#skill-grid {
+  background-color: white;
+  width: 90%;
+  height: 90%;
 }
 
-.section-text {
-  color: var(--sage);
-  font-size: 16px;
-  line-height: 2;
+/* PROJECTS */
+.box-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* PROJECT CAROUSEL */
+.box-projects .section-title {
+  margin-top: 50px;
+}
+
 .box-slider {
   width: 90%;
   padding-top: 20px;
