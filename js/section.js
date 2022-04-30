@@ -77,3 +77,24 @@ export async function loadProjects() {
     },
   }).mount();
 }
+
+export async function loadSkills() {
+  const data = await fetch(DATA_PATH + "skills.json");
+  const list = await data.json();
+
+  list.forEach((element) => {
+    let container = document.createElement("div");
+    let image = document.createElement("img");
+    let title = document.createElement("p");
+
+    container.classList.add("skill-card");
+    image.setAttribute("src", IMG_PATH + element.file);
+    title.classList.add("section-text");
+    title.textContent = element.name;
+
+    container.appendChild(image);
+    container.appendChild(title);
+
+    document.getElementById("skill-grid").appendChild(container);
+  });
+}

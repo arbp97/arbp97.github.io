@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   //load data to sections
   await Section.loadMediaLinks();
   await Section.loadProjects();
+  await Section.loadSkills();
 });
 
 // when starting width is close to mobile width

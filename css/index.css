@@ -260,6 +260,21 @@ main {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+  transition: all 0.15s;
+}
+
+.skill-card:hover {
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.skill-card > img {
+  margin-top: 2px;
+  width: 75%;
 }
 
 /* PROJECTS */
@@ -305,7 +320,7 @@ main {
 
 /* RESPONSIVE RESIZES */
 @media screen and (max-width: 1080px) {
-  .skill {
+  .skill-card {
     height: 150px;
     width: 150px;
   }
