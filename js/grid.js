@@ -1,5 +1,5 @@
 async function loadMediaLinks() {
-  const data = await fetch("/json/social.json");
+  const data = await fetch("json/social.json");
   const list = await data.json();
 
   list.forEach((element) => {
