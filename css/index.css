@@ -143,6 +143,12 @@ main {
   line-height: 2;
 }
 
+.section-text-important {
+  color: var(--sage);
+  font-size: 20px;
+  line-height: 2;
+}
+
 #contact,
 #about,
 #projects,
@@ -166,24 +172,24 @@ main {
 .box-contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 50px;
 }
 
 #contact-info {
-  width: 90%;
+  width: fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
   row-gap: 25px;
   margin-top: 50px;
-  margin-left: 50px;
+  text-align: center;
 }
 
 #contact-media-grid {
   display: grid;
   width: fit-content;
   height: fit-content;
-  margin-left: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 25px;
 }
@@ -397,10 +403,6 @@ main {
   }
   #contact-media-grid {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 0;
-  }
-  #contact-info {
-    margin-left: 0;
   }
   .box-contact {
     align-items: center;
