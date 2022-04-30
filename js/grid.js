@@ -23,4 +23,6 @@ async function loadMediaLinks() {
   });
 }
 
-loadMediaLinks();
+document.addEventListener("DOMContentLoaded", async function () {
+  await loadMediaLinks();
+});

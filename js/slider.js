@@ -34,21 +34,23 @@ async function loadProjects() {
   });
 }
 
-//load projects before initializing splide
-loadProjects();
+document.addEventListener("DOMContentLoaded", async function () {
+  //load projects before initializing splide
+  await loadProjects();
 
-new Splide("#project-slider", {
-  perPage: 2,
-  gap: "1rem",
-  height: "50vh",
-  breakpoints: {
-    900: {
-      direction: "ttb",
-      perPage: 2,
-      pagination: false,
-      arrows: false,
-      drag: false,
-      height: "fit-content",
+  new Splide("#project-slider", {
+    perPage: 2,
+    gap: "1rem",
+    height: "50vh",
+    breakpoints: {
+      900: {
+        direction: "ttb",
+        perPage: 2,
+        pagination: false,
+        arrows: false,
+        drag: false,
+        height: "fit-content",
+      },
     },
-  },
-}).mount();
+  }).mount();
+});
