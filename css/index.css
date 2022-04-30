@@ -235,10 +235,31 @@ main {
 
 /* SKILLS */
 
+.box-skills {
+  display: flex;
+  justify-content: center;
+}
+
 #skill-grid {
-  background-color: white;
   width: 90%;
-  height: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 30px;
+  padding: 10px 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.skill {
+  background-color: var(--rich-black-fogra-32);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 
 /* PROJECTS */
@@ -283,6 +304,13 @@ main {
 }
 
 /* RESPONSIVE RESIZES */
+@media screen and (max-width: 1080px) {
+  .skill {
+    height: 150px;
+    width: 150px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   p.logo-name {
     font-size: 16px;
@@ -356,6 +384,9 @@ main {
   }
   .box-contact {
     align-items: center;
+  }
+  #skills {
+    height: fit-content;
   }
 }
 
