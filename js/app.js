@@ -1,6 +1,5 @@
 import * as Util from "../js/util.js";
-import * as Grid from "../js/grid.js";
-import * as Slider from "../js/slider.js";
+import * as Section from "../js/section.js";
 
 // routing function
 function goTo(sectionId) {
@@ -28,25 +27,9 @@ Array.from(document.querySelectorAll("main>section")).forEach((section) => {
 
 // load tab content
 document.addEventListener("DOMContentLoaded", async function () {
-  await Grid.loadMediaLinks();
-  //load projects before initializing splide
-  await Slider.loadProjects();
-
-  new Splide("#project-slider", {
-    perPage: 2,
-    gap: "1rem",
-    height: "50vh",
-    breakpoints: {
-      900: {
-        direction: "ttb",
-        perPage: 2,
-        pagination: false,
-        arrows: false,
-        drag: false,
-        height: "fit-content",
-      },
-    },
-  }).mount();
+  //load data to sections
+  await Section.loadMediaLinks();
+  await Section.loadProjects();
 });
 
 // when starting width is close to mobile width
