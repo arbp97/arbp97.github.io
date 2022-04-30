@@ -1,4 +1,4 @@
-async function loadMediaLinks() {
+export async function loadMediaLinks() {
   const data = await fetch("json/social.json");
   const list = await data.json();
 
@@ -22,7 +22,3 @@ async function loadMediaLinks() {
     document.getElementById("contact-media-grid").appendChild(container);
   });
 }
-
-document.addEventListener("DOMContentLoaded", async function () {
-  await loadMediaLinks();
-});
