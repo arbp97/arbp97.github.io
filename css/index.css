@@ -7,7 +7,10 @@
 
 body {
   height: 100vh;
-  background-color: var(--sage);
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* VARIABLES */
@@ -15,10 +18,7 @@ body {
   --light-text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
   --rich-black-fogra-29: #0d1821ff;
   --rich-black-fogra-32: rgb(14, 20, 26);
-  --indigo-dye: #344966ff;
-  --silver: #bfc0c0ff;
-  --copper: #c47335ff;
-  --sage: #bfcc94ff;
+  --foreground: #feefdd;
 }
 
 /* HEADER */
@@ -30,7 +30,7 @@ header {
   top: 0;
   display: flex;
   background-color: var(--rich-black-fogra-29);
-  border-bottom: 5px solid var(--sage);
+  border-bottom: 5px solid var(--foreground);
 }
 
 nav.header-right {
@@ -61,7 +61,7 @@ nav.header-right {
   display: flex;
   flex-direction: column;
   row-gap: 1px;
-  color: var(--sage);
+  color: var(--foreground);
 }
 
 p.logo-name {
@@ -90,7 +90,7 @@ a.button {
   -moz-appearance: button;
   appearance: button;
   text-decoration: none;
-  color: var(--sage);
+  color: var(--foreground);
   background-color: var(--rich-black-fogra-29);
   padding: 10px 10px;
   font-size: 14px;
@@ -103,7 +103,7 @@ a.button {
 }
 
 a.button.active {
-  background-color: var(--sage);
+  background-color: var(--foreground);
   color: var(--rich-black-fogra-29);
 }
 
@@ -132,19 +132,19 @@ main {
 }
 
 .section-title {
-  color: var(--sage);
+  color: var(--foreground);
   font-size: 24px;
   font-weight: bold;
 }
 
 .section-text {
-  color: var(--sage);
+  color: var(--foreground);
   font-size: 16px;
   line-height: 2;
 }
 
 .section-text-important {
-  color: var(--sage);
+  color: var(--foreground);
   font-size: 20px;
   line-height: 2;
 }
@@ -174,7 +174,6 @@ main {
   flex-direction: column;
   align-items: center;
   row-gap: 50px;
-  padding-bottom: 20px;
 }
 
 #contact-info {
@@ -194,6 +193,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 25px;
   column-gap: 5px;
+  padding-bottom: 20px;
 }
 
 .media-link {
@@ -214,7 +214,7 @@ main {
 }
 
 .media-link p {
-  color: var(--sage);
+  color: var(--foreground);
   font-size: 12px;
   text-decoration: none;
 }
@@ -320,13 +320,13 @@ main {
 
 .splide__slide > .project-description {
   text-align: center;
-  color: var(--sage);
+  color: var(--foreground);
 }
 .splide__slide > .project-title {
   padding-bottom: 20px;
   font-weight: bold;
   text-decoration: underline;
-  color: var(--sage);
+  color: var(--foreground);
 }
 
 .splide__slide__container > img {
