@@ -10,16 +10,18 @@ export async function loadMediaLinks() {
     let container = document.createElement("div");
     let icon = document.createElement("img");
     let ref = document.createElement("a");
+    let name = document.createElement("p");
 
     // set classes and attributes
     container.classList.add("media-link");
     icon.setAttribute("src", IMG_PATH + element.file);
     ref.setAttribute("href", element.link);
-    ref.textContent = element.name;
+    name.textContent = element.name;
 
     // mount everything
-    container.appendChild(icon);
+    ref.appendChild(icon);
     container.appendChild(ref);
+    container.appendChild(name);
 
     // append to grid
     document.getElementById("contact-media-grid").appendChild(container);

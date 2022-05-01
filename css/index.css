@@ -193,6 +193,7 @@ main {
   height: fit-content;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 25px;
+  column-gap: 5px;
 }
 
 .media-link {
@@ -202,15 +203,23 @@ main {
   row-gap: 10px;
   align-items: center;
   padding: 10px 10px;
+  background-color: var(--rich-black-fogra-32);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 0.15s;
 }
 
-.media-link a {
-  color: var(--copper);
+.media-link:hover {
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.media-link p {
+  color: var(--sage);
   font-size: 12px;
   text-decoration: none;
 }
 
-.media-link > img {
+.media-link > a > img {
   width: 75px;
   border-radius: 5px;
 }
