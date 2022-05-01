@@ -267,6 +267,7 @@ main {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  padding: 5px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -423,5 +424,9 @@ main {
   }
   #contact-media-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .skill-card {
+    width: 125px;
+    height: 125px;
   }
 }
