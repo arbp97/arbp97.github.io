@@ -7,7 +7,7 @@
 
 body {
   background-color: var(--background);
-  height: 150vh;
+  height: fit-content;
 }
 
 /* VARIABLES */
@@ -442,7 +442,7 @@ main {
     grid-template-columns: 1fr 1fr;
   }
   .skill-card {
-    width: 125px;
-    height: 125px;
+    width: 110px;
+    height: 110px;
   }
 }
