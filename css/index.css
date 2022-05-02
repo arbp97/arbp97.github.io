@@ -55,6 +55,19 @@ nav.header-right {
   width: 50px;
 }
 
+.header-left > img:hover {
+  animation: App-logo-spin infinite 5s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .logo-info {
   display: flex;
   flex-direction: column;
