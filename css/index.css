@@ -6,7 +6,6 @@
 }
 
 body {
-  height: 100vh;
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -128,7 +127,7 @@ main {
   height: 95%;
   width: 90%;
   margin-left: 5%;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 .section-title {
@@ -193,7 +192,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 25px;
   column-gap: 5px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .media-link {
@@ -247,6 +246,7 @@ main {
   flex-direction: column;
   row-gap: 25px;
   margin-top: 50px;
+  padding-bottom: 20px;
 }
 
 /* SKILLS */
@@ -254,6 +254,9 @@ main {
 .box-skills {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
 }
 
 #skill-grid {
@@ -267,7 +270,7 @@ main {
   row-gap: 30px;
   padding: 10px 10px;
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .skill-card {
@@ -364,19 +367,19 @@ main {
   }
   #projects {
     height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   #about {
     height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   #skills {
     height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   #contact {
     height: fit-content;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 }
 
