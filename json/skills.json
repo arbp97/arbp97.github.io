@@ -42,5 +42,9 @@
     {
         "name": "C++",
         "file": "cpp.png"
+    },
+    {
+        "name": "Git",
+        "file": "git.svg"
     }
 ]
