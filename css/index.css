@@ -6,10 +6,7 @@
 }
 
 body {
-  background-image: url("../img/bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: var(--background);
   height: 150vh;
 }
 
@@ -19,6 +16,7 @@ body {
   --rich-black-fogra-29: #0d1821ff;
   --rich-black-fogra-32: rgb(14, 20, 26);
   --foreground: #feefdd;
+  --background: #184e77;
 }
 
 /* HEADER */
@@ -156,7 +154,6 @@ main {
   justify-content: center;
   align-items: center;
   height: fit-content;
-  padding-bottom: 30px;
 }
 
 .box-about,
@@ -167,6 +164,8 @@ main {
   height: 100%;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
   background-color: var(--rich-black-fogra-29);
+  border: 1px solid var(--foreground);
+  padding-bottom: 50px;
 }
 
 /* CONTACT */
@@ -403,10 +402,16 @@ main {
   #about-info {
     width: 90%;
     margin-left: 10px;
-    margin-bottom: 20px;
   }
   #contact-media-grid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .box-about,
+  .box-contact,
+  .box-projects,
+  .box-skills {
+    padding-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
