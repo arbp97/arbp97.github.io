@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 150vh;
 }
 
 /* VARIABLES */
@@ -154,7 +155,8 @@ main {
 #skills {
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: fit-content;
+  padding-bottom: 30px;
 }
 
 .box-about,
@@ -364,22 +366,6 @@ main {
   }
   .box-slider {
     width: 100%;
-  }
-  #projects {
-    height: fit-content;
-    padding-bottom: 30px;
-  }
-  #about {
-    height: fit-content;
-    padding-bottom: 30px;
-  }
-  #skills {
-    height: fit-content;
-    padding-bottom: 30px;
-  }
-  #contact {
-    height: fit-content;
-    padding-bottom: 30px;
   }
 }
 
