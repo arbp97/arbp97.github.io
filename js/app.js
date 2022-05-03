@@ -49,15 +49,3 @@ let beforeInstallEvent = null;
 window.addEventListener("beforeinstallprompt", event => {
   beforeInstallEvent = event;
 });
-
-function install() {
-    if (beforeInstallEvent) beforeInstallEvent.prompt();
-}
-
-document.getElementById("logo-button").addEventListener(
-  "click",
-  function () {
-    install();
-  },
-  false
-);
