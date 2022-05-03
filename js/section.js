@@ -68,7 +68,7 @@ export async function loadProjects() {
     gap: "1rem",
     height: "50vh",
     breakpoints: {
-      900: {
+      1350: {
         direction: "ttb",
         perPage: 2,
         pagination: false,

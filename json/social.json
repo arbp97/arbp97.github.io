@@ -10,6 +10,11 @@
         "file": "linkedin.png"
     },
     {
+        "name": "Instagram",
+        "link": "https://instagram.com/alan_blangille/",
+        "file": "instagram.png"
+    },
+    {
         "name": "StackOverflow",
         "link": "https://stackoverflow.com/users/18260305/arbp97",
         "file": "stack-overflow.png"
