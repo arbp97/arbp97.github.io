@@ -341,9 +341,10 @@ main {
   color: var(--foreground);
 }
 .splide__slide > .project-title {
-  padding-bottom: 18px;
+  padding-bottom: 20px;
   font-weight: bold;
   text-decoration: underline;
+  text-align: center;
   color: var(--foreground);
 }
 
