@@ -37,3 +37,27 @@ document.addEventListener("DOMContentLoaded", async function () {
 if (window.innerWidth <= 768) Util.resizeNavButtons();
 // nav button dynamic resizing
 window.onresize = Util.resizeNavButtons;
+
+// Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("serviceworker.js");
+}
+
+// Install 
+let beforeInstallEvent = null;
+
+window.addEventListener("beforeinstallprompt", event => {
+  beforeInstallEvent = event;
+});
+
+function install() {
+    if (beforeInstallEvent) beforeInstallEvent.prompt();
+}
+
+document.getElementById("logo-button").addEventListener(
+  "click",
+  function () {
+    install();
+  },
+  false
+);
