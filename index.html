@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -29,9 +29,11 @@
     <link rel="manifest" href="manifest.json" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="header-left">
-        <img src="img/logo512.png" alt="" />
+        <a id="home-button">
+          <img class="logo-img" src="img/logo512.png" alt="" />
+        </a>
         <div class="logo-info">
           <p class="logo-name"></p>
           <p class="logo-description"></p>
@@ -57,6 +59,35 @@
       </nav>
     </header>
     <main>
+      <section id="home">
+        <div id="home-box">
+          <div id="home-textbox">
+            <p class="home-title">Alan Blangille ></p>
+            <p class="home-text">
+              <span style="text-decoration: underline">></span> Desarrollo Web
+            </p>
+          </div>
+          <nav class="home-nav">
+            <a id="projects-button-home" class="button"
+              ><li class="fa fa-project-diagram"></li>
+              <span>Proyectos</span></a
+            >
+            <a id="skills-button-home" class="button"
+              ><li class="fa fa-diagnoses"></li>
+              <span>Habilidades</span></a
+            >
+            <a id="about-button-home" class="button"
+              ><li class="fa fa-user"></li>
+              <span>Sobre Mi</span></a
+            >
+            <a id="contact-button-home" class="button"
+              ><li class="fa fa-contact-card"></li>
+              <span>Contacto</span></a
+            >
+          </nav>
+        </div>
+        <img class="home-img" src="img/logo512.png" alt="" />
+      </section>
       <section id="about">
         <div class="box-about">
           <div id="about-info">

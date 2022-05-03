@@ -9,6 +9,15 @@ function goTo(sectionId) {
   });
   document.getElementById(sectionId).style.display = "flex";
   Util.setActive(sectionId + "-button");
+
+  // change bg if in landing page
+  if (sectionId === "home") {
+    document.body.style.backgroundColor = "#0d1821";
+    document.getElementById("header").style.display = "none";
+  } else {
+    document.body.style.backgroundColor = "#184e77";
+    document.getElementById("header").style.display = "flex";
+  }
 }
 
 // default route
@@ -23,6 +32,15 @@ Array.from(document.querySelectorAll("main>section")).forEach((section) => {
     },
     false
   );
+  if (section.id != "home") {
+    document.getElementById(section.id + "-button-home").addEventListener(
+      "click",
+      function () {
+        goTo(section.id);
+      },
+      false
+    );
+  }
 });
 
 // load section contents
@@ -39,13 +57,13 @@ if (window.innerWidth <= 768) Util.resizeNavButtons();
 window.onresize = Util.resizeNavButtons;
 
 // Service Worker
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("serviceworker.js");
 }
 
-// Install 
+// Install
 let beforeInstallEvent = null;
 
-window.addEventListener("beforeinstallprompt", event => {
+window.addEventListener("beforeinstallprompt", (event) => {
   beforeInstallEvent = event;
 });

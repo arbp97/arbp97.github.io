@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Fira Code", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 /* VARIABLES */
 :root {
   --light-text-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
-  --rich-black-fogra-29: #0d1821ff;
+  --rich-black-fogra-29: #0d1821;
   --rich-black-fogra-32: rgb(14, 20, 26);
   --foreground: #feefdd;
   --background: #184e77;
@@ -50,13 +50,17 @@ nav.header-right {
   column-gap: 5px;
 }
 
-.header-left > img {
+.logo-img {
   border-radius: 50%;
   width: 50px;
 }
 
-.header-left > img:hover {
+.logo-img:hover {
   animation: App-logo-spin infinite 5s linear;
+}
+
+.header-left > a {
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
@@ -179,6 +183,78 @@ main {
   background-color: var(--rich-black-fogra-29);
   border: 1px solid var(--foreground);
   padding-bottom: 50px;
+}
+
+/* HOME VIEW */
+#home {
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--rich-black-fogra-29);
+}
+
+#home-textbox {
+  padding: 20px 20px;
+  border: 2px solid var(--foreground);
+}
+
+.home-nav {
+  padding-top: 50px;
+  display: flex;
+  flex: row;
+}
+
+.home-nav a.button {
+  border-top: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--foreground);
+}
+
+.home-nav a.button:hover {
+  color: var(--rich-black-fogra-29);
+  background-color: var(--foreground);
+}
+
+.home-title,
+.home-text {
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-shadow: var(--light-text-shadow);
+}
+
+.home-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 0 var(--foreground);
+}
+
+.home-text {
+  font-size: 24px;
+  padding-left: 10px;
+  color: var(--rich-black-fogra-29);
+  box-shadow: inset 300px 0 0 0 var(--foreground);
+}
+
+.home-title:hover {
+  box-shadow: inset 400px 0 0 0 var(--foreground);
+  color: var(--rich-black-fogra-29);
+}
+
+.home-text:hover {
+  box-shadow: inset 0 0 0 0 var(--foreground);
+  color: var(--foreground);
+}
+
+.home-img {
+  border-radius: 50%;
+  width: 250px;
+  border: 5px solid var(--foreground);
+  transition: all 0.3s;
+}
+
+.home-img:hover {
+  background-color: var(--foreground);
+  animation: App-logo-spin infinite 3s linear;
 }
 
 /* CONTACT */
