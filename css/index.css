@@ -190,6 +190,7 @@ main {
   height: 80vh;
   width: 100%;
   align-items: center;
+  flex-direction: row;
   justify-content: space-evenly;
   background-color: var(--rich-black-fogra-29);
 }
@@ -248,13 +249,9 @@ main {
 .home-img {
   border-radius: 50%;
   width: 250px;
-  border: 5px solid var(--foreground);
+  border: 2px solid var(--foreground);
+  background-color: var(--rich-black-fogra-32);
   transition: all 0.3s;
-}
-
-.home-img:hover {
-  background-color: var(--foreground);
-  animation: App-logo-spin infinite 3s linear;
 }
 
 /* CONTACT */
@@ -460,6 +457,9 @@ main {
   p.logo-description {
     font-size: 12px;
   }
+  #home {
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -510,6 +510,26 @@ main {
   .box-skills {
     padding-bottom: 0;
     margin-bottom: 10px;
+  }
+
+  #home-box {
+    margin-top: 25px;
+  }
+
+  .home-title {
+    font-size: 32px;
+  }
+
+  .home-nav {
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  .home-nav a.button {
+    justify-content: space-around;
+  }
+  .home-nav a.button span {
+    font-size: 18px;
   }
 }
 
