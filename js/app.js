@@ -21,7 +21,7 @@ function goTo(sectionId) {
 }
 
 // default route
-goTo("about");
+goTo("home");
 
 // load listeners to buttons
 Array.from(document.querySelectorAll("main>section")).forEach((section) => {
