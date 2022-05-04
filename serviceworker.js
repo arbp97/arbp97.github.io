@@ -12,7 +12,7 @@ const urlsToCache = [
   "json/projects.json",
   "json/skills.json",
   "json/social.json",
-  "img/personal-nobg.jpg",
+  "img/personal-nobg.png",
   "img/logo192.png",
   "img/logo512.png",
   "img/logo1024.png",
