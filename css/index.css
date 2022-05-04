@@ -191,6 +191,7 @@ main {
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 20px;
   background-color: var(--rich-black-fogra-29);
 }
 
@@ -314,13 +315,13 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
 }
 
 .box-about > img {
-  width: 20%;
-  height: fit-content;
-  border-radius: 5px;
-  margin-top: 30px;
+  width: 400px;
+  border-radius: 50%;
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.7);
   border: 2px solid var(--foreground);
 }
@@ -331,7 +332,6 @@ main {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  margin-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -440,12 +440,30 @@ main {
   .box-slider {
     width: 100%;
   }
+  .box-about > img {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 1080px) {
   .skill-card {
     height: 150px;
     width: 150px;
+  }
+  .box-about > img {
+    width: 200px;
+    align-self: center;
+  }
+  .box-about {
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
+  #about-info {
+    width: 90%;
+  }
+  #about-info .section-text {
+    font-size: 14px;
+    text-align: justify;
   }
 }
 
@@ -482,23 +500,6 @@ main {
   }
   .header-left {
     width: 35%;
-  }
-
-  .box-about {
-    flex-direction: column-reverse;
-    row-gap: 10px;
-  }
-  .box-about > img {
-    width: 60%;
-    align-self: center;
-  }
-  #about-info {
-    width: 90%;
-    margin-left: 10px;
-  }
-  #about-info .section-text {
-    font-size: 14px;
-    text-align: justify;
   }
   #contact-media-grid {
     grid-template-columns: 1fr 1fr 1fr;

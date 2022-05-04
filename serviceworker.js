@@ -1,7 +1,7 @@
-// SW arbp97 v.1.3
+// SW arbp97 v.1.4
 
 const CACHE_NAME = "arbp97.github.io";
-const CACHE_VERSION = "1.3";
+const CACHE_VERSION = "1.4";
 
 const urlsToCache = [
   "/",
@@ -12,14 +12,14 @@ const urlsToCache = [
   "json/projects.json",
   "json/skills.json",
   "json/social.json",
-  "img/personal.jpg",
+  "img/personal-nobg.jpg",
   "img/logo192.png",
   "img/logo512.png",
   "img/logo1024.png",
 ];
 
 self.addEventListener("install", (event) => {
-  // Pre-cache archivos para offline y performance;
+  // Pre-cache files
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
       await cache.addAll(urlsToCache);
