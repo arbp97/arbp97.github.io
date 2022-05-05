@@ -51,7 +51,7 @@ nav.header-right {
 
 .logo-img {
   border-radius: 50%;
-  width: 50px;
+  width: 64px;
 }
 
 .logo-img:hover {
@@ -86,11 +86,11 @@ p.logo-name {
 }
 
 p.logo-name::before {
-  content: "ALAN BLANGILLE";
+  content: "Alan Blangille";
 }
 
 p.logo-description::before {
-  content: "Desarrollador";
+  content: "</dev>";
 }
 
 p.logo-description {
