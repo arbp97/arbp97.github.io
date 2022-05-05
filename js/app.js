@@ -15,13 +15,16 @@ function goTo(sectionId) {
     document.body.style.backgroundColor = "#0d1821";
     document.getElementById("header").style.display = "none";
 
-    document.getElementById("main").style.marginTop = "45px";
+    document.getElementById("main").style.marginTop = "30px";
   } else {
     document.body.style.backgroundColor = "#184e77";
     document.getElementById("header").style.display = "flex";
 
     document.getElementById("main").style.marginTop = "90px";
   }
+
+  // reset scrolling
+  window.scrollTo(0,0);
 }
 
 // default route
