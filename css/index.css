@@ -488,6 +488,7 @@ main {
   }
   #home {
     flex-direction: column-reverse;
+    row-gap: 20px;
     height: fit-content;
   }
 }
