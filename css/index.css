@@ -192,7 +192,9 @@ main {
   flex-direction: row;
   justify-content: space-evenly;
   padding-bottom: 20px;
+  padding-top: 20px;
   background-color: var(--rich-black-fogra-29);
+  border: 1px solid var(--foreground);
 }
 
 #home-textbox {
@@ -253,7 +255,7 @@ main {
 
 .home-img {
   border-radius: 50%;
-  width: 250px;
+  width: 400px;
   border: 2px solid var(--foreground);
   transition: all 0.3s;
   box-shadow: inset 0 0 1em 0.5em #000, 2px 2px 8px 2px rgba(0, 0, 0, 0.7);
@@ -471,6 +473,9 @@ main {
   #about-info .section-text {
     font-size: 14px;
     text-align: justify;
+  }
+  .home-img {
+    width: 250px;
   }
 }
 
