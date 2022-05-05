@@ -562,4 +562,8 @@ main {
     width: 110px;
     height: 110px;
   }
+  #home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }

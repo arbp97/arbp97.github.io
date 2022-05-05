@@ -10,13 +10,17 @@ function goTo(sectionId) {
   document.getElementById(sectionId).style.display = "flex";
   Util.setActive(sectionId + "-button");
 
-  // change bg if in landing page
+  // change bg & margin if in landing page
   if (sectionId === "home") {
     document.body.style.backgroundColor = "#0d1821";
     document.getElementById("header").style.display = "none";
+
+    document.getElementById("main").style.marginTop = "45px";
   } else {
     document.body.style.backgroundColor = "#184e77";
     document.getElementById("header").style.display = "flex";
+
+    document.getElementById("main").style.marginTop = "90px";
   }
 }
 
