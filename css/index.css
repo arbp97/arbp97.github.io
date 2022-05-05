@@ -566,4 +566,7 @@ main {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .home-img {
+    width: 200px;
+  }
 }
