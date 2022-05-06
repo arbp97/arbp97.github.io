@@ -4,7 +4,7 @@
     "start_url": "/?source=pwa",
     "scope": "/",
     "display": "standalone",
-    "background_color": "#0d1821ff",
+    "background_color": "#0d1821",
     "theme_color": "#feefdd",
     "description": "Esta app te permite tener los contenidos de arbp97.github.io directamente instalados en tu teléfono.",
     "icons": [
