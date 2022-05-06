@@ -1,3 +1,13 @@
-## My Page
+# arbp97.github.io
 
-Simple HTML/CSS/JS PWA with my portfolio & info
+My webpage / portfolio PWA.
+
+## Including
+
+* Resume
+* About me
+* Projects
+* Contact links
+* Skills
+
+---
