@@ -197,9 +197,38 @@ main {
   border: 1px solid var(--foreground);
 }
 
+#home-box {
+  display: flex;
+  flex-direction: column;
+}
+
 #home-textbox {
   padding: 20px 20px;
   border: 2px solid var(--foreground);
+}
+
+#download-btn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--foreground);
+  background-color: darkred;
+  padding: 10px 20px;
+  margin-top: 25%;
+  width: fit-content;
+  align-self: center;
+  transition: all 0.15s;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+#download-btn:hover {
+  background-color: rgb(104, 2, 2);
+}
+
+#download-btn:active {
+  opacity: 0.5;
 }
 
 .home-nav {

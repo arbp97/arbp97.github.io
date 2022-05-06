@@ -1,7 +1,7 @@
-// SW arbp97 v.1.5.5
+// SW arbp97 v.1.6
 
 const CACHE_NAME = "arbp97.github.io";
-const CACHE_VERSION = "1.5.5";
+const CACHE_VERSION = "1.6";
 
 const urlsToCache = [
   "/",
@@ -16,6 +16,7 @@ const urlsToCache = [
   "img/logo192.png",
   "img/logo512.png",
   "img/logo1024.png",
+  "ablangille_cv.pdf",
 ];
 
 self.addEventListener("install", (event) => {
