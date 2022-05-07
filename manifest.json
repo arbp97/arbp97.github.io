@@ -1,11 +1,11 @@
 {
     "name": "Alan Blangille",
     "short_name": "Blangille.DEV",
-    "start_url": "/?source=pwa",
+    "start_url": "/",
     "scope": "/",
     "display": "standalone",
     "background_color": "#0d1821",
-    "theme_color": "#feefdd",
+    "theme_color": "#184e77",
     "description": "Esta app te permite tener los contenidos de arbp97.github.io directamente instalados en tu teléfono.",
     "icons": [
         {

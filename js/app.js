@@ -67,10 +67,3 @@ window.onresize = Util.resizeNavButtons;
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("serviceworker.js");
 }
-
-// Install
-let beforeInstallEvent = null;
-
-window.addEventListener("beforeinstallprompt", (event) => {
-  beforeInstallEvent = event;
-});

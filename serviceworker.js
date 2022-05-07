@@ -1,15 +1,15 @@
-// SW arbp97 v.1.6.2
+// SW arbp97 v.1.7
 
 const CACHE_NAME = "arbp97.github.io";
-const CACHE_VERSION = "1.6.2";
+const CACHE_VERSION = "1.7";
 
 const urlsToCache = [
   "/",
   "index.html",
   "css/index.css",
-  "js/app.js",
   "js/util.js",
   "js/section.js",
+  "js/app.js",
   "json/projects.json",
   "json/skills.json",
   "json/social.json",
@@ -21,9 +21,9 @@ const urlsToCache = [
 ];
 
 self.addEventListener("install", (event) => {
-  // Pre-cache files
   event.waitUntil(
-    caches.open(CACHE_NAME).then(async (cache) => {
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
       await cache.addAll(urlsToCache);
 
       const projectsResponse = await fetch("json/projects.json");
@@ -41,21 +41,44 @@ self.addEventListener("install", (event) => {
       await cache.addAll(projects);
       await cache.addAll(skills);
       await cache.addAll(social);
-    })
+    })()
   );
+  // Force the waiting service worker to become the active service worker.
+  self.skipWaiting();
 });
 
-// Cache First Policy
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      // Enable navigation preload if it's supported.
+      if ("navigationPreload" in self.registration) {
+        await self.registration.navigationPreload.enable();
+      }
+    })()
+  );
+  // Tell the active service worker to take control of the page immediately.
+  self.clients.claim();
+});
+
+// Network First Policy
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(function (response) {
-      if (response) {
-        // CACHE HIT
+    (async () => {
+      try {
+        const networkResponse = await fetch(event.request);
+        const cache = await caches.open(CACHE_NAME);
+
+        cache.put(event.request, networkResponse.clone());
+
+        return networkResponse;
+      } catch (error) {
+        const response = await caches.match(event.request, {
+          cacheName: CACHE_NAME,
+          ignoreVary: true,
+        });
+
         return response;
-      } else {
-        // CACHE MISS
-        return fetch(event.request);
       }
-    })
+    })()
   );
 });
