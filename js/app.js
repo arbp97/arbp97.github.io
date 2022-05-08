@@ -1,6 +1,8 @@
 import * as Util from "../js/util.js";
 import * as Section from "../js/section.js";
 
+let ACTIVE_SECTION = "home"; // default
+
 // routing function
 function goTo(sectionId) {
   Array.from(document.querySelectorAll("main>section")).forEach((section) => {
@@ -10,25 +12,27 @@ function goTo(sectionId) {
   document.getElementById(sectionId).style.display = "flex";
   Util.setActive(sectionId + "-button");
 
+  ACTIVE_SECTION = sectionId;
+
   // change bg & margin if in landing page
   if (sectionId === "home") {
     document.body.style.backgroundColor = "#0d1821";
     document.getElementById("header").style.display = "none";
-
-    document.getElementById("main").style.marginTop = "30px";
   } else {
     document.body.style.backgroundColor = "#184e77";
     document.getElementById("header").style.display = "flex";
-
-    document.getElementById("main").style.marginTop = "90px";
   }
+
+  // set button size and margin
+  Util.resizeNavButtons(768);
+  Util.setMainMargin(ACTIVE_SECTION, 768);
 
   // reset scrolling
   window.scrollTo(0, 0);
 }
 
 // default route
-goTo("home");
+goTo(ACTIVE_SECTION);
 
 // load listeners to buttons
 Array.from(document.querySelectorAll("main>section")).forEach((section) => {
@@ -58,10 +62,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   await Section.loadSkills();
 });
 
-// when starting width is close to mobile width
-if (window.innerWidth <= 768) Util.resizeNavButtons();
-// nav button dynamic resizing
-window.onresize = Util.resizeNavButtons;
+// dynamic resizes
+window.onresize = () => {
+  Util.resizeNavButtons(768);
+  Util.setMainMargin(ACTIVE_SECTION, 768);
+};
 
 // Service Worker
 if ("serviceWorker" in navigator) {

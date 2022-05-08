@@ -186,7 +186,6 @@ a.button.active {
 main {
   width: 90%;
   margin-left: 5%;
-  margin-top: 90px;
   margin-bottom: 20px;
 }
 
@@ -620,6 +619,11 @@ main {
   }
   .home-nav a.button span {
     font-size: 18px;
+  }
+
+  main {
+    width: 95%;
+    margin-left: 2.5%;
   }
 }
 
