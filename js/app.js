@@ -7,12 +7,19 @@ let ACTIVE_SECTION = "home"; // default
 function goTo(sectionId) {
   Array.from(document.querySelectorAll("main>section")).forEach((section) => {
     section.style.display = "none";
+    section.classList.remove("section-animated");
     Util.removeActive(section.id + "-button");
   });
-  document.getElementById(sectionId).style.display = "flex";
-  Util.setActive(sectionId + "-button");
 
   ACTIVE_SECTION = sectionId;
+
+  const sectionElement = document.getElementById(sectionId);
+
+  // set section visibility
+  sectionElement.style.display = "flex";
+  // section entrance animation
+  sectionElement.classList.add("section-animated");
+  Util.setActive(sectionId + "-button");
 
   // change bg & margin if in landing page
   if (sectionId === "home") {
@@ -25,7 +32,7 @@ function goTo(sectionId) {
 
   // set button size and margin
   Util.resizeNavButtons(768);
-  Util.setMainMargin(ACTIVE_SECTION, 768);
+  Util.setMainMargin(sectionId, 768);
 
   // reset scrolling
   window.scrollTo(0, 0);

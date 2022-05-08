@@ -241,6 +241,33 @@ main {
   height: fit-content;
 }
 
+.section-animated {
+  animation: main-section-appear 0.3s;
+}
+
+@keyframes main-section-appear {
+  0% {
+    opacity: 0.2;
+    margin-top: 100%;
+  }
+  25% {
+    opacity: 0.4;
+    margin-top: 75%;
+  }
+  50% {
+    opacity: 0.6;
+    margin-top: 50%;
+  }
+  75% {
+    opacity: 0.8;
+    margin-top: 25%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .box-about,
 .box-contact,
 .box-projects,
