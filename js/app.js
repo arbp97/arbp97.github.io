@@ -29,6 +29,9 @@ function goTo(sectionId) {
 
   // reset scrolling
   window.scrollTo(0, 0);
+  // set opacity to 1 on first load
+  // (body opacity is set to 0 on css to avoid visual bugs on load)
+  document.body.style.opacity = 1;
 }
 
 // default route

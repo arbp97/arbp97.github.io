@@ -7,6 +7,7 @@
 
 body {
   height: 100%;
+  opacity: 0;
 }
 
 html {
@@ -27,6 +28,30 @@ footer {
   padding-top: 5px;
   border-top: 0.5px solid rgba(250, 235, 215, 0.5);
   background-color: var(--rich-black-fogra-29);
+  animation: footer-appear 0.5s;
+}
+
+@keyframes footer-appear {
+  0% {
+    bottom: 32px;
+    opacity: 0.2;
+  }
+  25% {
+    bottom: 24px;
+    opacity: 0.4;
+  }
+  50% {
+    bottm: 16px;
+    opacity: 0.6;
+  }
+  75% {
+    bottom: 8px;
+    opacity: 0.8;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
 }
 
 .footer-text {
@@ -239,6 +264,25 @@ main {
   padding-top: 20px;
   background-color: var(--rich-black-fogra-29);
   border: 1px solid var(--foreground);
+  animation: home-appear 0.5s;
+}
+
+@keyframes home-appear {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #home-box {
@@ -265,6 +309,35 @@ main {
   align-self: center;
   transition: all 0.15s;
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2);
+  animation: download-btn-appear 0.5s;
+}
+
+@keyframes download-btn-appear {
+  0% {
+    opacity: 0.2;
+    margin-top: 50%;
+    background-color: var(--background);
+  }
+  25% {
+    opacity: 0.4;
+    margin-top: 45%;
+    background-color: darkred;
+  }
+  50% {
+    opacity: 0.6;
+    margin-top: 35%;
+    background-color: var(--background);
+  }
+  75% {
+    opacity: 0.8;
+    margin-top: 30%;
+    background-color: darkred;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 25%;
+    background-color: var(--background);
+  }
 }
 
 #download-btn:hover {
