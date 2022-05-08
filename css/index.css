@@ -640,6 +640,10 @@ main {
     width: 110px;
     height: 110px;
   }
+  .skill-card > img {
+    margin-top: 5px;
+    width: 70%;
+  }
   #home {
     padding-top: 50px;
     padding-bottom: 50px;
