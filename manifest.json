@@ -5,25 +5,25 @@
     "scope": "/",
     "display": "standalone",
     "background_color": "#0d1821",
-    "theme_color": "#184e77",
+    "theme_color": "#0d1821",
     "description": "Esta app te permite tener los contenidos de arbp97.github.io directamente instalados en tu teléfono.",
     "icons": [
         {
-            "src": "img/logo192.png",
+            "src": "img/maskable_icon_x192.png",
             "sizes": "192x192",
             "purpose": "any",
+            "type": "image/png"
+        },
+        {
+            "src": "img/maskable_icon.png",
+            "sizes": "512x512",
+            "purpose": "maskable",
             "type": "image/png"
         },
         {
             "src": "img/logo512.png",
             "sizes": "512x512",
             "purpose": "any",
-            "type": "image/png"
-        },
-        {
-            "src": "img/logo1024.png",
-            "sizes": "1024x1024",
-            "purpose": "maskable",
             "type": "image/png"
         }
     ],

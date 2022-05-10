@@ -14,9 +14,9 @@ const urlsToCache = [
   "json/skills.json",
   "json/social.json",
   "img/personal-nobg.png",
-  "img/logo192.png",
+  "img/maskable_icon.png",
+  "img/maskable_icon_x192.png",
   "img/logo512.png",
-  "img/logo1024.png",
   "ablangille_cv.pdf",
 ];
 
