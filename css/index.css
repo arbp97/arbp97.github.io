@@ -290,7 +290,8 @@ main {
   padding-bottom: 20px;
   padding-top: 20px;
   background-color: var(--rich-black-fogra-29);
-  border: 1px solid var(--foreground);
+  border: 3px solid var(--foreground);
+  border-radius: 5px;
   animation: home-appear 0.5s;
 }
 
