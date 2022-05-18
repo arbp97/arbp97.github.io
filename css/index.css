@@ -274,9 +274,10 @@ main {
 .box-skills {
   width: 100%;
   height: 100%;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 /9%);
   background-color: var(--rich-black-fogra-29);
-  border: 1px solid var(--foreground);
+  border-radius: 10px;
+  border: 0.5px solid var(--foreground);
   padding-bottom: 50px;
 }
 
