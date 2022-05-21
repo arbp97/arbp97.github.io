@@ -23,6 +23,9 @@ window.addEventListener(
         addClass("header", "header-color");
       }
     }
+
+    document.getElementById("menu-toggle").checked = false;
+
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   },
   false
