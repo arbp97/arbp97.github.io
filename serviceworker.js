@@ -1,13 +1,13 @@
-// SW arbp97 v.1.7
+// SW arbp97 v.2.0
 
 const CACHE_NAME = "arbp97.github.io";
-const CACHE_VERSION = "1.7";
+const CACHE_VERSION = "2.0";
 
 const urlsToCache = [
   "/",
   "index.html",
   "css/index.css",
-  //"js/util.js",
+  "js/util.js",
   //"js/section.js",
   "js/app.js",
   "json/projects.json",

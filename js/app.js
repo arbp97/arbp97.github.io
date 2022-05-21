@@ -1,4 +1,4 @@
-//import * as Util from "../js/util.js";
+import { removeClass, addClass } from "../js/util.js";
 //import * as Section from "../js/section.js";
 
 let lastScrollTop = 0;
@@ -6,12 +6,22 @@ let lastScrollTop = 0;
 window.addEventListener(
   "scroll",
   function () {
-    // or window.addEventListener("scroll"....
-    var st = window.pageYOffset || document.documentElement.scrollTop;
+    let st = window.scrollY || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
-      document.getElementById("header").classList.add("hidden");
+      removeClass("header", "show");
+      addClass("header", "hide");
     } else {
-      document.getElementById("header").classList.remove("hidden");
+      removeClass("header", "hide");
+      addClass("header", "show");
+
+      // if top of the page
+      if (st === 0) {
+        removeClass("header", "header-color");
+        addClass("header", "gradient-blue");
+      } else {
+        removeClass("header", "gradient-blue");
+        addClass("header", "header-color");
+      }
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   },

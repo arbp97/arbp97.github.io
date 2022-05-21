@@ -20,11 +20,24 @@
     />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="manifest" href="manifest.json" />
-    <script defer src="js/app.js"></script>
+    <script defer src="js/app.js" type="module"></script>
   </head>
   <body>
-    <header id="header" class="gradient-blue"></header>
-    <section id="home" class="gradient-blue">hi</section>
+    <header id="header" class="gradient-blue show">
+      <div class="logo"><span id="logo-underline">></span> Alan Blangille</div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul id="menu" class="menu">
+        <li><a class="link" href="#home">Home</a></li>
+        <li><a class="link" href="#skills">Skills</a></li>
+        <li><a class="link" href="#projects">Projects</a></li>
+        <li><a class="link" href="#about">About me</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <section id="home" class="gradient-blue"></section>
     <section id="skills" class="gradient-white"></section>
     <section id="projects" class="gradient-blue"></section>
     <section id="about" class="gradient-white"></section>
