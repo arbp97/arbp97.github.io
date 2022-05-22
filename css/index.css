@@ -317,6 +317,9 @@ header {
   #home-lower-section {
     flex-direction: column;
   }
+  #home .illustration {
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width: 512px) {
