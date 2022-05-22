@@ -1,23 +1,16 @@
 {
-    "name": "Alan Blangille",
-    "short_name": "Blangille.DEV",
+    "short_name": "Alan Blangille",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
-    "background_color": "#0d1821",
-    "theme_color": "#0d1821",
+    "background_color": "#353535",
+    "theme_color": "#353535",
     "description": "Esta app te permite tener los contenidos de arbp97.github.io directamente instalados en tu teléfono.",
     "icons": [
         {
-            "src": "img/maskable_icon_x192.png",
+            "src": "img/logo192.png",
             "sizes": "192x192",
             "purpose": "any",
-            "type": "image/png"
-        },
-        {
-            "src": "img/maskable_icon.png",
-            "sizes": "512x512",
-            "purpose": "maskable",
             "type": "image/png"
         },
         {
