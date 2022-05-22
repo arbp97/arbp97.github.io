@@ -23,3 +23,21 @@ export async function loadMediaLinks() {
     document.getElementById("home-media-links").appendChild(ref);
   });
 }
+
+export async function loadSkillCards() {
+  const data = await fetch(DATA_PATH + "skills.json");
+  const list = await data.json();
+
+  list.forEach((element) => {
+    // create elements
+    let icon = document.createElement("img");
+
+    // set classes and attributes
+    icon.classList.add("skill-card");
+    icon.setAttribute("src", IMG_PATH + element.file);
+    icon.setAttribute("title", element.name);
+
+    // append to container
+    document.getElementById("skill-box-grid").appendChild(icon);
+  });
+}

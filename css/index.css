@@ -19,15 +19,6 @@
   --shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
-.gradient-blue {
-  background: var(--bright-blue);
-  background: linear-gradient(
-    90deg,
-    var(--bright-blue) 37%,
-    var(--dark-blue) 100%
-  );
-}
-
 .gradient-purple {
   background: #360033; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -39,20 +30,6 @@
     to right,
     #0b8793,
     #360033
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.gradient-white {
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -366,11 +343,11 @@ header {
   display: flex;
   flex-direction: row;
   column-gap: 20px;
-  width: fit-content;
   height: fit-content;
   padding: 5px 5px;
   letter-spacing: 2px;
   align-items: center;
+  justify-content: center;
 }
 
 .section-title.white-font {
@@ -381,18 +358,74 @@ header {
   color: var(--bright-blue);
 }
 
-.section-title > img {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  box-shadow: var(--shadow);
-}
-
 #skills {
   min-height: 100vh;
   padding: 50px 10%;
   display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  justify-content: space-around;
+}
+
+#skill-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: fit-content;
+  align-items: center;
+}
+
+#skill-box > img {
+  width: 500px;
+  height: 500px;
+}
+
+#skill-box-grid {
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 50px;
+  column-gap: 50px;
+  padding-bottom: 30px;
+  padding: 10px 10px;
+}
+
+.skill-card {
+  box-shadow: var(--shadow);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+  transition: all 0.25s;
+}
+
+.skill-card:hover {
+  box-shadow: 2px 2px 13px 2px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  #skill-box {
+    flex-direction: column;
+  }
+  #skill-box-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #skill-box > img {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #skill-box-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 #projects {

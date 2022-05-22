@@ -18,8 +18,7 @@ const urlsToCache = [
   "img/logo192.png",
   "img/logo512.png",
   "img/coding.gif",
-  "img/coding_animated_1.gif",
-  "img/coding_animated_2.gif",
+  "img/coding_animated_3.gif",
   "ablangille_cv.pdf",
 ];
 

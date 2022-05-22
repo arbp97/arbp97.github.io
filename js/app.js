@@ -1,6 +1,7 @@
 import { removeClass, addClass } from "../js/util.js";
-import { loadMediaLinks } from "../js/section.js";
+import { loadMediaLinks, loadSkillCards } from "../js/section.js";
 
+// header behavior
 let lastScrollTop = 0;
 
 window.addEventListener(
@@ -29,10 +30,22 @@ window.addEventListener(
   false
 );
 
+// smooth scrolling on anchor link
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 // load section contents
 document.addEventListener("DOMContentLoaded", async function () {
   //load data to sections
   await loadMediaLinks();
+  await loadSkillCards();
 });
 
 // Service Worker
