@@ -1,5 +1,5 @@
 import { removeClass, addClass } from "../js/util.js";
-//import * as Section from "../js/section.js";
+import { loadMediaLinks } from "../js/section.js";
 
 let lastScrollTop = 0;
 
@@ -13,33 +13,27 @@ window.addEventListener(
     } else {
       removeClass("header", "hide");
       addClass("header", "show");
-
-      // if top of the page
-      if (st === 0) {
-        removeClass("header", "header-color");
-        addClass("header", "gradient-blue");
-      } else {
-        removeClass("header", "gradient-blue");
-        addClass("header", "header-color");
-      }
     }
 
     document.getElementById("menu-toggle").checked = false;
 
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
+    // if top of the page
+    if (st === 0) {
+      removeClass("header", "header-color");
+    } else {
+      addClass("header", "header-color");
+    }
   },
   false
 );
 
-/*
 // load section contents
 document.addEventListener("DOMContentLoaded", async function () {
   //load data to sections
-  await Section.loadMediaLinks();
-  await Section.loadProjects();
-  await Section.loadSkills();
+  await loadMediaLinks();
 });
-*/
 
 // Service Worker
 if ("serviceWorker" in navigator) {

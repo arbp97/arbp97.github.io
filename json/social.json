@@ -1,6 +1,6 @@
 [
     {
-        "name": "Gmail",
+        "name": "Email",
         "link": "mailto:alanblangille@gmail.com",
         "file": "email.png"
     },
@@ -10,23 +10,8 @@
         "file": "linkedin.png"
     },
     {
-        "name": "Instagram",
-        "link": "https://instagram.com/alan_blangille/",
-        "file": "instagram.png"
-    },
-    {
-        "name": "StackOverflow",
-        "link": "https://stackoverflow.com/users/18260305/arbp97",
-        "file": "stack-overflow.png"
-    },
-    {
         "name": "GitHub",
         "link": "https://www.github.com/arbp97",
         "file": "github.png"
-    },
-    {
-        "name": "Steam",
-        "link": "https://steamcommunity.com/id/arbp97/",
-        "file": "steam-logo.png"
     }
 ]

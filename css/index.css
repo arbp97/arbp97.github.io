@@ -59,10 +59,10 @@ a.button {
   appearance: button;
   text-decoration: none;
   color: var(--indigo-dye);
-  background-color: var(--gainsboro);
+  background-color: var(--white);
   border-radius: 0.25rem;
   box-shadow: var(--shadow-light);
-  padding: 10px 10px;
+  padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -70,6 +70,7 @@ a.button {
   column-gap: 5px;
   width: fit-content;
   height: fit-content;
+  border: 1px solid transparent;
   transition: all 0.15s;
 }
 
@@ -82,11 +83,16 @@ a.icon {
   display: flex;
   width: 40px;
   height: auto;
+  border: 1px solid transparent;
   border-radius: 50%;
 }
 
 a.icon > img:hover {
   border: 1px solid var(--white);
+}
+
+a.icon:active {
+  opacity: 0.8;
 }
 
 a.icon > img {
@@ -212,7 +218,7 @@ header {
   transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .menu-button-container {
     display: flex;
   }
@@ -255,8 +261,20 @@ header {
 }
 
 #home {
-  padding: 150px 50px 10px 10%;
-  height: 100vh;
+  padding-top: 125px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#home-lower-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #home .title {
@@ -272,14 +290,44 @@ header {
   font-weight: 300;
   line-height: 1.7;
   font-size: 1.25rem;
-  width: 75%;
   transition: all 0.15s;
   margin-bottom: 3rem;
 }
 
+#download-btn {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+#download-btn:hover {
+  opacity: 0.8;
+  background-color: var(--bright-blue);
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+#home .illustration {
+  width: 512px;
+  padding: 20px 20px;
+  height: auto;
+  align-self: center;
+}
+
 @media screen and (max-width: 768px) {
-  #home .brief {
-    width: 100%;
+  #home-lower-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  #home {
+    padding-top: 125px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #home .illustration {
+    width: 100vw;
   }
 }
 

@@ -23,38 +23,43 @@
     <script defer src="js/app.js" type="module"></script>
   </head>
   <body>
-    <header id="header" class="gradient-blue show">
+    <header id="header" class="show">
       <div class="logo"><span id="logo-underline">></span> Alan Blangille</div>
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button"></div>
-      </label>
-      <ul id="menu" class="menu">
-        <li><a class="link" href="#home">Home</a></li>
-        <li><a class="link" href="#skills">Skills</a></li>
-        <li><a class="link" href="#projects">Projects</a></li>
-        <li><a class="link" href="#about">About me</a></li>
-        <li><a class="link" href="#contact">Contact</a></li>
-      </ul>
+      <div id="menu-container">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+        <ul id="menu" class="menu">
+          <li><a class="link" href="#home">Home</a></li>
+          <li><a class="link" href="#skills">Skills</a></li>
+          <li><a class="link" href="#projects">Projects</a></li>
+          <li><a class="link" href="#about">About me</a></li>
+          <li><a class="link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </header>
     <section id="home" class="gradient-blue">
-      <p class="title">Hi there, I'm Alan</p>
-      <p class="brief">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
-        minima quisquam impedit reiciendis nulla animi praesentium nesciunt
-        architecto quas facilis minus id labore dolores unde voluptatibus,
-        delectus amet aliquid vero!
-      </p>
-      <div class="icon-list">
-        <a class="icon" href="#">
-          <img src="img/github.png" alt="" />
-        </a>
-        <a class="icon" href="#">
-          <img src="img/email.png" alt="" />
-        </a>
-        <a class="icon" href="#">
-          <img src="img/linkedin.png" alt="" />
-        </a>
+      <div id="home-info">
+        <p class="title">Hi there, I'm Alan</p>
+        <p class="brief">
+          I'm a web developer, with experience in both backend and frontend;
+          having used technologies such as NodeJS, React, Spring, MongoDB and
+          MySQL. I'm experienced on teamwork, using agile methodologies to
+          improve team communication and customer satisfaction. I work everyday
+          to improve myself as a programmer to keep growing on my career as a
+          professional developer.
+        </p>
+      </div>
+      <div id="home-lower-section">
+        <div id="home-buttons">
+          <div id="home-media-links" class="icon-list"></div>
+          <a id="download-btn" class="button" href="ablangille_cv.pdf" download
+            ><li class="fa fa-download"></li>
+            My Resume</a
+          >
+        </div>
+        <img class="illustration" src="img/coding.png" alt="" />
       </div>
     </section>
     <section id="skills" class="gradient-white"></section>

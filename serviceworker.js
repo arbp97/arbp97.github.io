@@ -8,7 +8,7 @@ const urlsToCache = [
   "index.html",
   "css/index.css",
   "js/util.js",
-  //"js/section.js",
+  "js/section.js",
   "js/app.js",
   "json/projects.json",
   "json/skills.json",
@@ -17,6 +17,7 @@ const urlsToCache = [
   "img/maskable_icon.png",
   "img/maskable_icon_x192.png",
   "img/logo512.png",
+  "img/coding.png",
   "ablangille_cv.pdf",
 ];
 
