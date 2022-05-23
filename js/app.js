@@ -29,8 +29,18 @@ window.addEventListener(
 
     // fires when the element is on screen
     if (isInViewport("skills-title")) {
-      document.getElementById("skill-box").classList.add("slide-in-color");
+      document.getElementById("skill-box").classList.add("slide-in", "blue");
       document.getElementById("skill-box").style.opacity = 1;
+    }
+
+    let projects = document.getElementById("project-box").children;
+
+    for (const p of projects) {
+      // when the title of the project is on viewport
+      if (isInViewport(p.firstElementChild.firstElementChild)) {
+        p.classList.add("slide-in");
+        p.style.opacity = 1;
+      }
     }
   },
   false
