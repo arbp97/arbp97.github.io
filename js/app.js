@@ -1,4 +1,4 @@
-import { removeClass, addClass } from "../js/util.js";
+import { removeClass, addClass, isInViewport } from "../js/util.js";
 import { loadMediaLinks, loadSkillCards } from "../js/section.js";
 
 // header behavior
@@ -25,6 +25,12 @@ window.addEventListener(
       removeClass("header", "header-color");
     } else {
       addClass("header", "header-color");
+    }
+
+    // fires when the element is on screen
+    if (isInViewport("skills-title")) {
+      document.getElementById("skill-box").classList.add("slide-in-color");
+      document.getElementById("skill-box").style.opacity = 1;
     }
   },
   false

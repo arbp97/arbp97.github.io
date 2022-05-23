@@ -14,7 +14,7 @@
   --indigo-dye: #284b63ff;
   --dark-blue: #023e8a;
   --bright-blue: #0077b6;
-  --brightred: #c1121f;
+  --bright-red: #c1121f;
   --shadow-light: 0 3px 13px 1px rgb(0 0 0 /9%);
   --shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
@@ -189,27 +189,27 @@ header {
   transition-delay: 0.35s;
 }
 
-.from-top:before,
-.from-top:after {
+.menu-list-item-animated:before,
+.menu-list-item-animated:after {
   left: 0;
   height: 0;
   width: 100%;
 }
 
-.from-top:before {
+.menu-list-item-animated:before {
   bottom: 0;
   border: 1px solid var(--white);
   border-top: 0;
   border-bottom: 0;
 }
 
-.from-top:after {
+.menu-list-item-animated:after {
   top: 0;
   height: 0;
 }
 
-.from-top:hover:before,
-.from-top:hover:after {
+.menu-list-item-animated:hover:before,
+.menu-list-item-animated:hover:after {
   height: 100%;
 }
 
@@ -348,7 +348,7 @@ header {
 }
 
 #download-btn:hover {
-  background-color: var(--brightred);
+  background-color: var(--bright-red);
   border: 1px solid var(--white);
   color: var(--white);
 }
@@ -418,6 +418,8 @@ header {
   justify-content: space-evenly;
   height: fit-content;
   align-items: center;
+  /* Before animation */
+  opacity: 0;
 }
 
 #skill-box > img {
@@ -437,7 +439,7 @@ header {
 }
 
 .skill-card {
-  box-shadow: var(--shadow);
+  box-shadow: 4px 4px 13px 4px rgba(0, 0, 0, 0.3);
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -451,25 +453,68 @@ header {
 }
 
 .skill-card:hover {
-  box-shadow: 2px 2px 13px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 4px 4px 26px 4px rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 768px) {
-  #skill-box {
-    flex-direction: column;
+.slide-in-color {
+  position: relative;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) .3s 1 reveal forwards;
+}
+
+.slide-in-color::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-blue);
+  padding: inherit;
+  animation: 0.75s cubic-bezier(1, -0.01, 0.12, 0.8) .6s 1 reverse-reveal forwards;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
-  #skill-box-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+}
+
+@keyframes reverse-reveal {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
+@media screen and (max-width: 500px) {
   #skill-box > img {
     width: 100vw;
     height: auto;
   }
 }
 
+@media screen and (max-width: 1350px) {
+  #skill-box {
+    flex-direction: column;
+  }
+  #skill-box-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 400px) {
   #skill-box-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .skill-card {
+    height: 80px;
+    width: 80px;
   }
 }
 
