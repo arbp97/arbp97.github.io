@@ -3,7 +3,7 @@
         "name": "Saint Patrick Homebanking",
         "description": "Aplicacion Web enfocada en el manejo de informacion de cuentas y transferencias de dinero en una billetera virtual, haciendo uso de una REST API construida en Node. Tecnologias: React, Node, Express, MongoDB",
         "file": "saint-patrick.png",
-        "link": "https://stp-homebanking-api.herokuapp.com"
+        "link": "https://github.com/arbp97/hb-api/"
     },
     {
         "name": "E-Commerce Web Page",
