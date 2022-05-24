@@ -72,8 +72,14 @@ export async function loadProjectCards() {
     text.classList.add("text");
     text.textContent = element.description;
 
-    liveLink.classList.add("button");
-    liveLink.setAttribute("href", element.link);
+    if (element.live) {
+      liveLink.classList.add("button");
+      liveLink.setAttribute("href", element.live);
+    } else {
+      liveLink.classList.add("button", "disabled");
+      liveLink.setAttribute("href", "#");
+    }
+
     repoLink.classList.add("button");
     repoLink.setAttribute("href", element.link);
 

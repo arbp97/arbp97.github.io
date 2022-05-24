@@ -1,25 +1,26 @@
 [
     {
         "name": "Saint Patrick Homebanking",
-        "description": "Aplicacion Web enfocada en el manejo de informacion de cuentas y transferencias de dinero en una billetera virtual, haciendo uso de una REST API construida en Node. Tecnologias: React, Node, Express, MongoDB",
+        "description": "Web App that simulates an E-Wallet, focused on money transactions in multiple currencies and account information. Frontend: React, Webpack, Styled Components. Backend: NodeJS, Express, Json Web Token, MongoDB.",
         "file": "saint-patrick.png",
-        "link": "https://github.com/arbp97/hb-api/"
+        "link": "https://github.com/arbp97/hb-api/",
+        "live": "https://stp-homebanking-api.herokuapp.com"
     },
     {
-        "name": "E-Commerce Web Page",
-        "description": "Pagina Web destinada a la compra y venta de productos y seguimiento de envios. Tecnologias: Java Spring, Bootstrap, MySQL",
+        "name": "E-Commerce Web",
+        "description": "CRUD web page that lets you register stores, add products and make orders on those products. Depending on your role you can manage those orders. Frontend: Thymeleaf, Bootstrap. Backend: Spring, MySQL.",
         "file": "java-crud.png",
         "link": "https://github.com/arbp97/sales-crud"
     },
     {
         "name": "BTree View",
-        "description": "Aplicacion de escritorio que permite construir y visualizar arboles binarios, con sus metodos de ordenamiento y balanceo AVL. Tecnologias: C, GTK3",
+        "description": "Desktop App based on C, GTK 3 and Glade. It helps you build and visualize binary trees, make use of various arrangement methods. Also includes AVL tree auto-balancing.",
         "file": "btree-view.png",
         "link": "https://github.com/arbp97/btree-view"
     },
     {
         "name": "Simple Text Editor",
-        "description": "Editor de texto con funciones basicas como abrir, editar, guardar archivos; modificar el estilo y tamaño de la fuente. Tecnologias: Java, Swing",
+        "description": "Text editor with basic functions: open files from a folder tree, modify and save files to disk. Also includes settings like font size and family. Made with Java and Swing.",
         "file": "text-editor.png",
         "link": "https://github.com/arbp97/java-text-editor"
     }

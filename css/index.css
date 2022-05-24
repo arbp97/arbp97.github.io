@@ -75,6 +75,15 @@ a.button:active {
   opacity: 0.8;
 }
 
+a.button.disabled,
+a.button.disabled:hover {
+  background-color: grey;
+  cursor: default;
+  color: var(--white);
+  border: 1px solid grey;
+  pointer-events: none;
+}
+
 a.icon {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -642,6 +651,7 @@ header {
   font-size: 18px;
   align-items: center;
   font-weight: bold;
+  flex-direction: row-reverse;
 }
 
 .project-links .button:hover {
