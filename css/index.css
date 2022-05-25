@@ -496,8 +496,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 50px;
   column-gap: 50px;
-  padding-bottom: 30px;
-  padding: 10px 10px;
+  padding: 2em;
 }
 
 .skill-card {
