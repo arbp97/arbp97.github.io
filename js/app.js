@@ -33,6 +33,11 @@ window.addEventListener(
       document.getElementById("skill-box").style.opacity = 1;
     }
 
+    if (isInViewport("about-title")) {
+      document.getElementById("about-text").classList.add("slide-in", "blue");
+      document.getElementById("about-text").style.opacity = 1;
+    }
+
     let projects = document.getElementById("project-box").children;
 
     for (const p of projects) {
