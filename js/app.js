@@ -34,7 +34,7 @@ window.addEventListener(
     }
 
     if (isInViewport("about-title")) {
-      document.getElementById("about-text").classList.add("slide-in", "blue");
+      document.getElementById("about-text").classList.add("slide-in", "jet");
       document.getElementById("about-text").style.opacity = 1;
     }
 

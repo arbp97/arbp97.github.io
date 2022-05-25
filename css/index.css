@@ -471,6 +471,10 @@ header {
   color: var(--bright-blue);
 }
 
+.section-title.jet-font {
+  color: var(--jet);
+}
+
 #skills {
   min-height: 100vh;
   padding: 50px 10%;
@@ -543,6 +547,10 @@ header {
 
 .slide-in.blue::after {
   background: var(--dark-blue);
+}
+
+.slide-in.jet::after {
+  background: var(--jet);
 }
 
 @keyframes reveal {
@@ -715,7 +723,7 @@ header {
 }
 
 .info > .text-box {
-  color: var(--dark-blue);
+  color: var(--jet);
   font-size: 18px;
   letter-spacing: 0.5px;
   display: flex;
@@ -732,18 +740,6 @@ header {
   margin-bottom: 10px;
 }
 
-.info > img {
-  border-radius: 10px;
-  width: 400px;
-  height: fit-content;
-  transition: all 0.3s;
-  box-shadow: inset 0 0 1em 0.5em #000, 2px 2px 8px 2px rgba(0, 0, 0, 0.7);
-  animation: morph 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  z-index: 5;
-  transition: all 1s ease-in-out;
-}
-
 @media screen and (max-width: 1350px) {
   #about > .info {
     flex-direction: column-reverse;
@@ -755,7 +751,7 @@ header {
 }
 
 @media screen and (max-width: 400px) {
-  .info > img {
+  .info > .photo > #photo-main {
     width: 90vw;
   }
   .info > .text-box {
@@ -763,16 +759,56 @@ header {
   }
 }
 
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
+.photo {
+  position: relative;
+}
+
+.photo #photo-main {
+  width: 400px;
+  height: fit-content;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+}
+
+.photo:hover #photo-main {
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.photo .glow-wrap {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-top: -10px;
+}
+
+.photo .glow {
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  filter: blur(5px);
+  transform: rotate(45deg) translate(-450%, 0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover .glow {
+  transform: rotate(45deg) translate(450%, 0);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo #photo-logo {
+  position: absolute;
+  z-index: 1;
+  margin-left: 90%;
+  width: 24px;
 }
 
 @media screen and (max-width: 768px) {
