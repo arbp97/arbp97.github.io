@@ -1,9 +1,5 @@
 import { removeClass, addClass, isInViewport } from "../js/util.js";
-import {
-  loadMediaLinks,
-  loadSkillCards,
-  loadProjectCards,
-} from "../js/section.js";
+import { loadSkillCards, loadProjectCards } from "../js/section.js";
 
 // header behavior
 let lastScrollTop = 0;
@@ -64,7 +60,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // load section contents
 document.addEventListener("DOMContentLoaded", async function () {
   //load data to sections
-  await loadMediaLinks();
   await loadSkillCards();
   await loadProjectCards();
 });
