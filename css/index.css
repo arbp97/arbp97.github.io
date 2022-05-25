@@ -734,6 +734,7 @@ header {
   line-height: 2em;
   hyphens: auto;
   opacity: 0;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .text-box > p {
