@@ -1,7 +1,7 @@
 // SW arbp97 v.2.0
 
 const CACHE_NAME = "arbp97.github.io";
-const CACHE_VERSION = "2.0";
+const CACHE_VERSION = "2.1";
 
 const urlsToCache = [
   "/",
@@ -12,7 +12,6 @@ const urlsToCache = [
   "js/app.js",
   "json/projects.json",
   "json/skills.json",
-  "json/social.json",
   "img/personal-nobg.png",
   "img/favicon.png",
   "img/logo192.png",
@@ -30,15 +29,12 @@ self.addEventListener("install", (event) => {
 
       const projectsResponse = await fetch("json/projects.json");
       const skillsResponse = await fetch("json/skills.json");
-      const socialResponse = await fetch("json/social.json");
 
       const jsonProjects = await projectsResponse.json();
       const jsonSkills = await skillsResponse.json();
-      const jsonSocial = await socialResponse.json();
 
       const projects = jsonProjects.map((p) => "/img/" + p.file);
       const skills = jsonSkills.map((sk) => "/img/" + sk.file);
-      const social = jsonSocial.map((so) => "/img/" + so.file);
 
       await cache.addAll(projects);
       await cache.addAll(skills);

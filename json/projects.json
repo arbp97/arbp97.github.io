@@ -7,6 +7,13 @@
         "live": "https://stp-homebanking-api.herokuapp.com"
     },
     {
+        "name": "McDonald's App (Clone)",
+        "description": "Progressive Web App emulating the style and functionality the native original app of McDonald's. This project was made with educational & technical purposes only. Stack: React, Bootstrap.",
+        "file": "mcapp.png",
+        "link": "https://github.com/arbp97/mcapp/",
+        "live": "https://mcdapp.vercel.app/"
+    },
+    {
         "name": "E-Commerce Web",
         "description": "CRUD web page that lets you register stores, add products and make orders on those products. Depending on your role you can manage those orders. Frontend: Thymeleaf, Bootstrap. Backend: Spring, MySQL.",
         "file": "java-crud.png",
