@@ -7,8 +7,8 @@
         "live": "https://stp-homebanking-api.herokuapp.com"
     },
     {
-        "name": "McDonald's App (Clone)",
-        "description": "Progressive Web App emulating the style and functionality the native original app of McDonald's. This project was made with educational & technical purposes only. Stack: React, Bootstrap.",
+        "name": "McDonald's App Clone",
+        "description": "Progressive Web App emulating the style and functionality the native original app of McDonald's. This project was developed for an assignment at UNLa. Stack: React, Bootstrap.",
         "file": "mcapp.png",
         "link": "https://github.com/arbp97/mcapp/",
         "live": "https://mcdapp.vercel.app/"
