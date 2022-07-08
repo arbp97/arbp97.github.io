@@ -1,4 +1,4 @@
-// SW arbp97 v.2.0
+// SW arbp97 v.2.1
 
 const CACHE_NAME = "arbp97.github.io";
 const CACHE_VERSION = "2.1";
@@ -38,7 +38,6 @@ self.addEventListener("install", (event) => {
 
       await cache.addAll(projects);
       await cache.addAll(skills);
-      await cache.addAll(social);
     })()
   );
   // Force the waiting service worker to become the active service worker.
