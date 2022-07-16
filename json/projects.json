@@ -1,7 +1,7 @@
 [
     {
         "name": "Saint Patrick Homebanking",
-        "description": "Web App that simulates an E-Wallet, focused on money transactions in multiple currencies and account information. Frontend: React, Webpack, Styled Components. Backend: NodeJS, Express, Json Web Token, MongoDB.",
+        "description": "Web App that simulates an E-Wallet, focused on money transactions in multiple currencies and account information. Frontend: React, Styled Components. Backend: NodeJS, Express, JWT, MongoDB. Demo Credentials: anarod@gmail.com BushidoTrooper123",
         "file": "saint-patrick.png",
         "link": "https://github.com/arbp97/hb-api/",
         "live": "https://home-banking-psi.vercel.app/"
