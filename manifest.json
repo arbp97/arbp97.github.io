@@ -19,23 +19,5 @@
             "purpose": "any maskable",
             "type": "image/png"
         }
-    ],
-    "screenshots": [
-        {
-            "src": "img/screenshot-1.jpeg",
-            "sizes": "761x1600",
-            "type": "image/jpeg"
-        },
-        {
-            "src": "img/screenshot-2.jpeg",
-            "sizes": "761x1600",
-            "type": "image/jpeg"
-        },
-        {
-            "src": "img/screenshot-3.jpeg",
-            "sizes": "761x1600",
-            "type": "image/jpeg"
-        }
     ]
-
 }

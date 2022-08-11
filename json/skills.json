@@ -12,8 +12,8 @@
         "file": "js.png"
     },
     {
-        "name": "Node JS",
-        "file": "node-js.png"
+        "name": "Typescript",
+        "file": "typescript.png"
     },
     {
         "name": "React JS",
@@ -28,20 +28,20 @@
         "file": "css-3.png"
     },
     {
-        "name": "MySQL",
-        "file": "mysql.png"
+        "name": "SQL",
+        "file": "sql.png"
     },
     {
         "name": "MongoDB",
         "file": "mongodb.png"
     },
     {
-        "name": "C",
-        "file": "letter-c.png"
+        "name": "C#",
+        "file": "c-sharp.png"
     },
     {
-        "name": "C++",
-        "file": "cpp.png"
+        "name": ".NET",
+        "file": "net.svg"
     },
     {
         "name": "Git",
