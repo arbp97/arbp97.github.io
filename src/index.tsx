@@ -1,4 +1,8 @@
 import "./index.css";
+import "primereact/resources/themes/vela-blue/theme.css"; //theme
+import "primereact/resources/primereact.min.css"; //core css
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
