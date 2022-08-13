@@ -2,6 +2,8 @@ import "../styles/sidebar.overrides.css";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { LINKS } from "../data/links";
+import { THEMES } from "../config";
+import { useState } from "react";
 
 const items = [
   { label: "Home", icon: "pi pi-fw pi-home", section: "landing" },
@@ -19,9 +21,21 @@ const NavigationSidebar = ({
   visibleSidebar,
   setVisibleSidebar,
 }: NavigationSidebarProps) => {
+  const [theme, setTheme] = useState(true);
+
   const onClick = (section: string) => {
     setVisibleSidebar(false);
     window.location.replace("/#" + section);
+  };
+
+  const changeTheme = () => {
+    let themeLink = document.getElementById("app-theme") as HTMLAnchorElement;
+    if (!themeLink) return;
+
+    if (theme) themeLink.href = THEMES.light;
+    else themeLink.href = THEMES.dark;
+
+    setTheme(!theme);
   };
 
   return (
@@ -31,6 +45,14 @@ const NavigationSidebar = ({
       blockScroll={true}
       className="p-sidebar-sm"
       onHide={() => setVisibleSidebar(false)}
+      icons={
+        <Button
+          className="p-button-rounded p-button-outlined"
+          icon={theme ? "pi pi-sun" : "pi pi-moon"}
+          tooltip="Change theme"
+          onClick={() => changeTheme()}
+        />
+      }
     >
       <div className="flex flex-column gap-3">
         {items.map((value, index) => {

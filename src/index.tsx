@@ -1,5 +1,5 @@
 import "./styles/index.css";
-import "primereact/resources/themes/mdc-dark-indigo/theme.css"; //theme
+// main theme imported in index.html
 import "primereact/resources/primereact.min.css"; //core css
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";

@@ -1,5 +1,6 @@
 import { Toolbar } from "primereact/toolbar";
 import { Button } from "primereact/button";
+import { Image } from "primereact/image";
 
 type TopbarProps = {
   setVisibleSidebar: (visible: boolean) => void;
@@ -16,6 +17,7 @@ const Topbar = ({ setVisibleSidebar }: TopbarProps) => {
           onClick={() => setVisibleSidebar(true)}
         />
       }
+      left={<Image src={"favicon.png"} width="32px" />}
     ></Toolbar>
   );
 };
