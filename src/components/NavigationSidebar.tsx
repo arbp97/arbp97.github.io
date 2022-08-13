@@ -59,7 +59,7 @@ const NavigationSidebar = ({
           return (
             <Button
               key={index}
-              className="p-button-outlined p-button-raised p-button-rounded"
+              className="p-button-outlined p-button-rounded"
               label={value.label}
               icon={value.icon}
               onClick={() => onClick(value.section)}
