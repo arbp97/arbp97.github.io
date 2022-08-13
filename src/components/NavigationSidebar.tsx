@@ -1,12 +1,13 @@
+import "../styles/sidebar.overrides.css";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
+import { LINKS } from "../data/links";
 
 const items = [
   { label: "Home", icon: "pi pi-fw pi-home", section: "landing" },
   { label: "Skills", icon: "pi pi-fw pi-code", section: "skills" },
   { label: "Projects", icon: "pi pi-fw pi-book", section: "projects" },
   { label: "About Me", icon: "pi pi-fw pi-user", section: "about" },
-  { label: "Contact", icon: "pi pi-fw pi-envelope", section: "" },
 ];
 
 type NavigationSidebarProps = {
@@ -40,6 +41,19 @@ const NavigationSidebar = ({
               label={value.label}
               icon={value.icon}
               onClick={() => onClick(value.section)}
+            ></Button>
+          );
+        })}
+      </div>
+      <div className="flex flex-row justify-content-center">
+        {LINKS.map((value, index) => {
+          return (
+            <Button
+              key={index}
+              className="p-button-text p-button-rounded p-link"
+              icon={value.icon}
+              tooltip={value.name}
+              onClick={() => window.open(value.link, "_blank")}
             ></Button>
           );
         })}
