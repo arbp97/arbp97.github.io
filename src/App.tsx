@@ -23,7 +23,7 @@ const App = () => {
           className={visibleSidebar ? "border-none hidden" : "border-none"}
           onClick={() => setVisibleSidebar(true)}
           style={{
-            position: "absolute",
+            position: "fixed",
             top: "25%",
             right: "0",
           }}

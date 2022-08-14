@@ -8,9 +8,9 @@ import { useThemeContext } from "../context/ThemeContext";
 
 const items = [
   { label: "Home", icon: "pi pi-fw pi-home", section: "landing" },
+  { label: "About Me", icon: "pi pi-fw pi-user", section: "about" },
   { label: "Skills", icon: "pi pi-fw pi-code", section: "skills" },
   { label: "Projects", icon: "pi pi-fw pi-book", section: "projects" },
-  { label: "About Me", icon: "pi pi-fw pi-user", section: "about" },
 ];
 
 type Props = {
@@ -37,7 +37,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
       onHide={() => setVisibleSidebar(false)}
       icons={
         <Button
-          className="p-button-rounded"
+          className="p-button-outlined"
           icon={currentTheme ? "pi pi-sun" : "pi pi-moon"}
           tooltip="Change theme"
           onClick={() => {
@@ -64,16 +64,17 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
         <i className="pi pi-chevron-right" style={{ fontSize: "2em" }}></i>
       </Button>
       <Toast ref={themeToast} position="top-left" />
-      <div className="flex flex-column gap-3">
+      <div className="flex flex-column gap-2">
         {items.map((value, index) => {
           return (
             <Button
               key={index}
-              className="p-button-outlined"
+              className="font-bold"
               label={value.label}
-              icon={value.icon}
               onClick={() => handleClick(value.section)}
-            ></Button>
+            >
+              <i className={value.icon} style={{ fontSize: "1.5em" }}></i>
+            </Button>
           );
         })}
       </div>
