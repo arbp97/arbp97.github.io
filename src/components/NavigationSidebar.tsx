@@ -1,6 +1,8 @@
 import "../styles/sidebar.overrides.css";
+import { useRef } from "react";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
+import { Toast } from "primereact/toast";
 import { LINKS } from "../data/links";
 import { useThemeContext } from "../context/ThemeContext";
 
@@ -18,6 +20,7 @@ type Props = {
 
 const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
   const { currentTheme, changeTheme } = useThemeContext();
+  const themeToast = useRef<any>(null);
 
   const onClick = (section: string) => {
     setVisibleSidebar(false);
@@ -36,10 +39,19 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           className="p-button-rounded p-button-outlined"
           icon={currentTheme ? "pi pi-sun" : "pi pi-moon"}
           tooltip="Change theme"
-          onClick={() => changeTheme()}
+          onClick={() => {
+            changeTheme();
+            themeToast.current?.show({
+              severity: "info",
+              summary: "Theme Changed",
+              detail: currentTheme ? "Light Mode" : "Dark Mode",
+              life: 1000,
+            });
+          }}
         />
       }
     >
+      <Toast ref={themeToast} position="top-left" />
       <div className="flex flex-column gap-3">
         {items.map((value, index) => {
           return (
