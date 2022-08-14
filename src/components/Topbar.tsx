@@ -13,6 +13,7 @@ const Topbar = ({ setVisibleSidebar }: Props) => {
   const { currentTheme } = useThemeContext();
   return (
     <Toolbar
+    className="opacity-80"
       right={
         <Button
           className="p-button-text"
@@ -22,6 +23,7 @@ const Topbar = ({ setVisibleSidebar }: Props) => {
       }
       left={
         <Image
+          className="mt-1"
           src={
             currentTheme
               ? IMG_PATH + "logo-light.png"

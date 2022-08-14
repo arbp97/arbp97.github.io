@@ -3,8 +3,9 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import About from "./sections/About";
 import NavigationSidebar from "./components/NavigationSidebar";
-import Topbar from "./components/Topbar";
+//import Topbar from "./components/Topbar";
 import { ScrollTop } from "primereact/scrolltop";
+import { Button } from "primereact/button";
 import { useState } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 
@@ -14,15 +15,25 @@ const App = () => {
   return (
     <>
       <ThemeProvider>
-        <Topbar setVisibleSidebar={setVisibleSidebar} />
         <NavigationSidebar
           visibleSidebar={visibleSidebar}
           setVisibleSidebar={setVisibleSidebar}
         />
+        <Button
+          className={visibleSidebar ? "border-none hidden" : "border-none"}
+          onClick={() => setVisibleSidebar(true)}
+          style={{
+            position: "absolute",
+            top: "25%",
+            right: "0",
+          }}
+        >
+          <i className="pi pi-chevron-left" style={{ fontSize: "2em" }}></i>
+        </Button>
         <Landing />
+        <About />
         <Skills />
         <Projects />
-        <About />
         <ScrollTop threshold={200} />
       </ThemeProvider>
     </>

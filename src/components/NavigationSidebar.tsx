@@ -22,7 +22,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
   const { currentTheme, changeTheme } = useThemeContext();
   const themeToast = useRef<any>(null);
 
-  const onClick = (section: string) => {
+  const handleClick = (section: string) => {
     setVisibleSidebar(false);
     window.location.replace("/#" + section);
   };
@@ -32,11 +32,12 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
       visible={visibleSidebar}
       position="right"
       blockScroll={true}
-      className="p-sidebar-sm"
+      showCloseIcon={false}
+      style={{ width: "15em" }}
       onHide={() => setVisibleSidebar(false)}
       icons={
         <Button
-          className="p-button-rounded p-button-outlined"
+          className="p-button-rounded"
           icon={currentTheme ? "pi pi-sun" : "pi pi-moon"}
           tooltip="Change theme"
           onClick={() => {
@@ -51,16 +52,27 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
         />
       }
     >
+      <Button
+        className="border-none"
+        onClick={() => setVisibleSidebar(false)}
+        style={{
+          position: "absolute",
+          top: "25%",
+          left: "-64px",
+        }}
+      >
+        <i className="pi pi-chevron-right" style={{ fontSize: "2em" }}></i>
+      </Button>
       <Toast ref={themeToast} position="top-left" />
       <div className="flex flex-column gap-3">
         {items.map((value, index) => {
           return (
             <Button
               key={index}
-              className="p-button-outlined p-button-rounded"
+              className="p-button-outlined"
               label={value.label}
               icon={value.icon}
-              onClick={() => onClick(value.section)}
+              onClick={() => handleClick(value.section)}
             ></Button>
           );
         })}
@@ -70,7 +82,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           return (
             <Button
               key={index}
-              className="p-button-text p-button-rounded p-link"
+              className="p-button-text p-button-rounded"
               icon={value.icon}
               tooltip={value.name}
               onClick={() => window.open(value.link, "_blank")}
