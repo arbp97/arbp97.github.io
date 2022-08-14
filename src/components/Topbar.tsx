@@ -1,13 +1,16 @@
 import "../styles/toolbar.overrides.css";
+import { IMG_PATH } from "../config";
 import { Toolbar } from "primereact/toolbar";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
+import { useThemeContext } from "../context/ThemeContext";
 
-type TopbarProps = {
+type Props = {
   setVisibleSidebar: (visible: boolean) => void;
 };
 
-const Topbar = ({ setVisibleSidebar }: TopbarProps) => {
+const Topbar = ({ setVisibleSidebar }: Props) => {
+  const { currentTheme } = useThemeContext();
   return (
     <Toolbar
       right={
@@ -17,7 +20,16 @@ const Topbar = ({ setVisibleSidebar }: TopbarProps) => {
           onClick={() => setVisibleSidebar(true)}
         />
       }
-      left={<Image src={"favicon.png"} width="32px" />}
+      left={
+        <Image
+          src={
+            currentTheme
+              ? IMG_PATH + "logo-light.png"
+              : IMG_PATH + "logo-dark.png"
+          }
+          width="32px"
+        />
+      }
     ></Toolbar>
   );
 };

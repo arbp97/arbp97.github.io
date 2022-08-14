@@ -2,8 +2,7 @@ import "../styles/sidebar.overrides.css";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { LINKS } from "../data/links";
-import { THEMES } from "../config";
-import { useState } from "react";
+import { useThemeContext } from "../context/ThemeContext";
 
 const items = [
   { label: "Home", icon: "pi pi-fw pi-home", section: "landing" },
@@ -12,30 +11,17 @@ const items = [
   { label: "About Me", icon: "pi pi-fw pi-user", section: "about" },
 ];
 
-type NavigationSidebarProps = {
+type Props = {
   visibleSidebar: boolean;
   setVisibleSidebar: (visible: boolean) => void;
 };
 
-const NavigationSidebar = ({
-  visibleSidebar,
-  setVisibleSidebar,
-}: NavigationSidebarProps) => {
-  const [theme, setTheme] = useState(true);
+const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
+  const { currentTheme, changeTheme } = useThemeContext();
 
   const onClick = (section: string) => {
     setVisibleSidebar(false);
     window.location.replace("/#" + section);
-  };
-
-  const changeTheme = () => {
-    let themeLink = document.getElementById("app-theme") as HTMLAnchorElement;
-    if (!themeLink) return;
-
-    if (theme) themeLink.href = THEMES.light;
-    else themeLink.href = THEMES.dark;
-
-    setTheme(!theme);
   };
 
   return (
@@ -48,7 +34,7 @@ const NavigationSidebar = ({
       icons={
         <Button
           className="p-button-rounded p-button-outlined"
-          icon={theme ? "pi pi-sun" : "pi pi-moon"}
+          icon={currentTheme ? "pi pi-sun" : "pi pi-moon"}
           tooltip="Change theme"
           onClick={() => changeTheme()}
         />

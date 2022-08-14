@@ -5,21 +5,24 @@ import About from "./sections/About";
 import NavigationSidebar from "./components/NavigationSidebar";
 import Topbar from "./components/Topbar";
 import { useState } from "react";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
 
   return (
     <>
-      <Topbar setVisibleSidebar={setVisibleSidebar} />
-      <NavigationSidebar
-        visibleSidebar={visibleSidebar}
-        setVisibleSidebar={setVisibleSidebar}
-      />
-      <Landing />
-      <Skills />
-      <Projects />
-      <About />
+      <ThemeProvider>
+        <Topbar setVisibleSidebar={setVisibleSidebar} />
+        <NavigationSidebar
+          visibleSidebar={visibleSidebar}
+          setVisibleSidebar={setVisibleSidebar}
+        />
+        <Landing />
+        <Skills />
+        <Projects />
+        <About />
+      </ThemeProvider>
     </>
   );
 };
