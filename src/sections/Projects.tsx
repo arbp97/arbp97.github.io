@@ -2,6 +2,7 @@ import { useThemeContext } from "../context/ThemeContext";
 import { PROJECTS } from "../data/projects";
 import { IMG_PATH } from "../config";
 import { Galleria } from "primereact/galleria";
+import { Button } from "primereact/button";
 import { Image } from "primereact/image";
 
 const Projects = () => {
@@ -26,11 +27,26 @@ const Projects = () => {
             key={index}
             className="flex flex-column lg:flex-row justify-content-center w-full h-auto gap-8"
           >
-            <div className="w-full md:w-3 h-auto flex flex-column gap-1">
+            <div className="w-full lg:w-3 h-auto flex flex-column gap-1">
               <p className="text-primary text-2xl font-bold">{value.name}</p>
               <p className="text-color text-xl line-height-2">
                 {value.description}
               </p>
+              <div className="flex flex-row w-full mt-6 gap-3">
+                <Button
+                  className="p-button-outlined"
+                  label="Live"
+                  disabled={value.live ? false : true}
+                  icon="pi pi-external-link"
+                  onClick={() => window.open(value.live, "_blank")}
+                />
+                <Button
+                  className="p-button-outlined"
+                  label="Repository"
+                  icon="pi pi-github"
+                  onClick={() => window.open(value.link, "_blank")}
+                />
+              </div>
             </div>
             <Galleria
               className="w-full lg:w-6"

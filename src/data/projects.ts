@@ -4,8 +4,8 @@ export const PROJECTS = [
     description:
       "Web App that simulates an E-Wallet, focused on money transactions in multiple currencies and account information. Frontend: React, Styled Components. Backend: NodeJS, Express, JWT, MongoDB. Demo Credentials: anarod@gmail.com BushidoTrooper123",
     files: [
-      "projects/st-patrick-1.png",
       "projects/st-patrick-2.png",
+      "projects/st-patrick-1.png",
       "projects/st-patrick-3.png",
       "projects/st-patrick-4.png",
     ],
