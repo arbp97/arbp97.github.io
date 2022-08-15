@@ -9,7 +9,7 @@ const About = () => {
       id="about"
       className="flex flex-column align-items-center bg-primary-reverse pb-8"
     >
-      <p className="text-5xl font-bold mb-8">ABOUT ME</p>
+      <p className="text-5xl font-bold mt-0 mb-8">ABOUT ME</p>
       <div className="flex flex-column sm:flex-row justify-content-center align-items-center gap-8 w-11">
         <Image
           className="black-white-filter"

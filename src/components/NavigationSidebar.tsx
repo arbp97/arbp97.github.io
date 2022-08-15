@@ -1,8 +1,10 @@
 import "../styles/sidebar.overrides.css";
+import { IMG_PATH } from "../config";
 import { useRef } from "react";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
+import { Image } from "primereact/image";
 import { LINKS } from "../data/links";
 import { useThemeContext } from "../context/ThemeContext";
 
@@ -71,7 +73,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           return (
             <Button
               key={index}
-              className="font-bold p-button-outlined"
+              className="font-bold p-button-outlined w-14rem"
               label={value.label}
               onClick={() => handleClick(value.section)}
             >
@@ -80,6 +82,15 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           );
         })}
       </div>
+      <Image
+        className="mt-1"
+        src={
+          currentTheme
+            ? IMG_PATH + "logo-light.png"
+            : IMG_PATH + "logo-dark.png"
+        }
+        width="64px"
+      />
       <div className="flex flex-row justify-content-center">
         {LINKS.map((value, index) => {
           return (
