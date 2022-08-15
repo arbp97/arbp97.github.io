@@ -6,11 +6,13 @@ import NavigationSidebar from "./components/NavigationSidebar";
 //import Topbar from "./components/Topbar";
 import { ScrollTop } from "primereact/scrolltop";
 import { Button } from "primereact/button";
+import PrimeReact from "primereact/api";
 import { useState } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
+  PrimeReact.ripple = true;
 
   return (
     <div className="bg-primary-reverse">

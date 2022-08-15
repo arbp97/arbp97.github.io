@@ -17,7 +17,7 @@ const About = () => {
       }
     >
       <p className="text-5xl font-bold mt-0 mb-8 text-primary">ABOUT ME</p>
-      <div className="flex flex-column sm:flex-row justify-content-center align-items-center gap-8 w-11">
+      <div className="flex flex-column sm:flex-row justify-content-center align-items-center gap-8 w-11 mb-8">
         <Image
           className="black-white-filter"
           src={IMG_PATH + "personal.png"}
