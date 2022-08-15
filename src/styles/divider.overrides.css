@@ -1,0 +1,7 @@
+.p-divider.p-divider-horizontal .p-divider-content {
+  padding: 0 !important;
+}
+
+.p-divider.p-divider-horizontal::before {
+  border-color: white;
+}

@@ -1,0 +1,17 @@
+.p-sidebar {
+  border: none;
+}
+
+.p-sidebar-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-sidebar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
