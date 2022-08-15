@@ -33,7 +33,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
       position="right"
       blockScroll={true}
       showCloseIcon={false}
-      style={{ width: "15em" }}
+      style={{ width: "16em" }}
       onHide={() => setVisibleSidebar(false)}
       icons={
         <Button
@@ -57,8 +57,10 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
         onClick={() => setVisibleSidebar(false)}
         style={{
           position: "absolute",
+          paddingLeft: ".5em",
+          paddingRight: ".5em",
           top: "25%",
-          left: "-64px",
+          left: "-48px",
         }}
       >
         <i className="pi pi-chevron-right" style={{ fontSize: "2em" }}></i>
@@ -69,7 +71,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           return (
             <Button
               key={index}
-              className="font-bold"
+              className="font-bold p-button-outlined"
               label={value.label}
               onClick={() => handleClick(value.section)}
             >

@@ -24,8 +24,11 @@ const App = () => {
           onClick={() => setVisibleSidebar(true)}
           style={{
             position: "fixed",
+            paddingLeft: ".5em",
+            paddingRight: ".5em",
             top: "25%",
             right: "0",
+            zIndex: 1000,
           }}
         >
           <i className="pi pi-chevron-left" style={{ fontSize: "2em" }}></i>
