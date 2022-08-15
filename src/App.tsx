@@ -13,7 +13,7 @@ const App = () => {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
 
   return (
-    <>
+    <div className="bg-primary-reverse">
       <ThemeProvider>
         <NavigationSidebar
           visibleSidebar={visibleSidebar}
@@ -39,7 +39,7 @@ const App = () => {
         <Projects />
         <ScrollTop threshold={200} />
       </ThemeProvider>
-    </>
+    </div>
   );
 };
 
