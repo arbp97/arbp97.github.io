@@ -38,6 +38,10 @@ section {
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%);
 }
 
+#footer {
+  height: 300px;
+}
+
 * {
   scroll-behavior: smooth;
 }
