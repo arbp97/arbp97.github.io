@@ -7,11 +7,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-column justify-content-center align-items-center bg-primary-reverse mb-8"
+      className="flex flex-column justify-content-center align-items-center bg-primary-reverse pb-8"
     >
       <div className="mt-4 w-10">
         <span
-          className="text-5xl font-bold mt-0 mb-8"
+          className="text-5xl font-bold mt-0"
           style={{ wordBreak: "break-word" }}
         >
           TECHNOLOGIES AND TOOLS
