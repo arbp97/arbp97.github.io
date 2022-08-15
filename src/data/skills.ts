@@ -20,6 +20,14 @@ export const SKILLS = [
     image: "skills/css-3.png",
   },
   {
+    name: "C",
+    image: "skills/c.png",
+  },
+  {
+    name: "C++",
+    image: "skills/cpp.png",
+  },
+  {
     name: "C#",
     image: "skills/c-sharp.png",
   },
@@ -46,5 +54,9 @@ export const SKILLS = [
   {
     name: "Git",
     image: "skills/git.svg",
+  },
+  {
+    name: "Linux",
+    image: "skills/linux.png",
   },
 ];
