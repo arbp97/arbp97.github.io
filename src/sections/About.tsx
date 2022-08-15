@@ -4,20 +4,44 @@ import { Image } from "primereact/image";
 import { Divider } from "primereact/divider";
 import { Button } from "primereact/button";
 import { useThemeContext } from "../context/ThemeContext";
+import { useRef, useState, useEffect } from "react";
 
 const About = () => {
   const { currentTheme } = useThemeContext();
+  const domRef = useRef<any>();
+  const [isVisible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      // In your case there's only one element to observe:
+      if (entries[0].isIntersecting) {
+        // Not possible to set it back to false like this:
+        setVisible(true);
+
+        // No need to keep observing:
+        observer.unobserve(domRef.current);
+      }
+    });
+
+    observer.observe(domRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
       id="about"
       className={
         "flex flex-column align-items-center pb-8 " +
-        (currentTheme ? "bg-bluegray-900" : "bg-primary-100")
+        (currentTheme ? "bg-bluegray-900" : "bg-primary-100") +
+        (isVisible ? " fadein animation-duration-1000" : " opacity-0")
       }
     >
       <p className="text-5xl font-bold mt-0 mb-8 text-primary">ABOUT ME</p>
-      <div className="flex flex-column sm:flex-row justify-content-center align-items-center gap-8 w-11 mb-8">
+      <div
+        ref={domRef}
+        className="flex flex-column sm:flex-row justify-content-center align-items-center gap-8 w-11 mb-8"
+      >
         <Image
           className="black-white-filter"
           src={IMG_PATH + "personal.png"}
