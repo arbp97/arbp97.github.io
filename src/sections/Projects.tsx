@@ -4,9 +4,13 @@ import { IMG_PATH } from "../config";
 import { Galleria } from "primereact/galleria";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
+import { useRef } from "react";
+import useObserver from "../hooks/useObserver";
 
 const Projects = () => {
   const { currentTheme } = useThemeContext();
+  const ref = useRef<any>(null);
+  const isVisible = useObserver(ref);
 
   const itemTemplate = (item: any) => {
     return <Image src={IMG_PATH + item.src} alt={""} width="100%" preview />;
@@ -20,14 +24,23 @@ const Projects = () => {
         (currentTheme ? " bg-bluegray-900" : " bg-primary-100")
       }
     >
-      <p className="text-5xl font-bold mt-0 mb-8 text-primary">PROJECTS</p>
+      <p ref={ref} className="text-5xl font-bold mt-0 mb-8 text-primary">
+        PROJECTS
+      </p>
       {PROJECTS.map((value, index) => {
         return (
           <div
             key={index}
             className="flex flex-column lg:flex-row justify-content-center w-full h-auto gap-8"
           >
-            <div className="w-full lg:w-3 h-auto flex flex-column gap-1">
+            <div
+              className={
+                "w-full lg:w-3 h-auto flex flex-column gap-1" +
+                (isVisible
+                  ? " fadeinleft animation-duration-500"
+                  : " opacity-0")
+              }
+            >
               <p className="text-primary text-2xl font-bold">{value.name}</p>
               <p className="text-color text-xl line-height-2">
                 {value.description}
@@ -49,7 +62,12 @@ const Projects = () => {
               </div>
             </div>
             <Galleria
-              className="w-full lg:w-6"
+              className={
+                "w-full lg:w-6" +
+                (isVisible
+                  ? " fadeinright animation-duration-500"
+                  : " opacity-0")
+              }
               value={value.files.map((element) => ({
                 src: element,
               }))}
