@@ -3,7 +3,6 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import About from "./sections/About";
 import NavigationSidebar from "./components/NavigationSidebar";
-//import Topbar from "./components/Topbar";
 import { ScrollTop } from "primereact/scrolltop";
 import { Button } from "primereact/button";
 import PrimeReact from "primereact/api";

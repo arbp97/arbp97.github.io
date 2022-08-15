@@ -2,14 +2,22 @@ import { IMG_PATH } from "../config";
 import { SKILLS } from "../data/skills";
 import { Image } from "primereact/image";
 import { Ripple } from "primereact/ripple";
+import useObserver from "../hooks/useObserver";
+import { useRef } from "react";
 
 const Skills = () => {
+  const ref = useRef<any>(null);
+  const isVisible = useObserver(ref);
+
   return (
     <section
       id="skills"
-      className="flex flex-column justify-content-center align-items-center bg-primary-reverse pb-8"
+      className={
+        "flex flex-column justify-content-center align-items-center bg-primary-reverse pb-8" +
+        (isVisible ? " fadein animation-duration-1000" : " opacity-0")
+      }
     >
-      <div className="mt-4 w-10">
+      <div ref={ref} className="mt-4 w-10">
         <span
           className="text-5xl font-bold mt-0"
           style={{ wordBreak: "break-word" }}
