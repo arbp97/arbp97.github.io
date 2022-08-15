@@ -33,12 +33,9 @@ section {
 }
 
 #projects {
-  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%);
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%);
-}
-
-#projects {
-  height: 100vh;
+  padding-top: 24rem;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%);
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%);
 }
 
 * {
