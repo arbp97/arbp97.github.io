@@ -4,6 +4,7 @@ import { IMG_PATH } from "../config";
 import { Galleria } from "primereact/galleria";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
+import { Tag } from "primereact/tag";
 import { useRef } from "react";
 import useObserver from "../hooks/useObserver";
 
@@ -45,6 +46,15 @@ const Projects = () => {
               <p className="text-color text-xl line-height-2">
                 {value.description}
               </p>
+              <div className="flex flex-row gap-1">
+                {value.stack.map((tech, index) => (
+                  <Tag
+                    key={index}
+                    value={tech}
+                    style={{ width: "fit-content" }}
+                  ></Tag>
+                ))}
+              </div>
               <div className="flex flex-row w-full mt-6 gap-3">
                 <Button
                   className="p-button-outlined"

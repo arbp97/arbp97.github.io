@@ -10,7 +10,7 @@ const Footer = () => {
       className="flex flex-column justify-content-center align-items-center gap-3 bg-gray-800"
     >
       <Image src={IMG_PATH + "logo-light.png"} width="64" />
-      <p className="text-xs text-color">&copy; Alan Blangille 2022</p>
+      <p className="text-xs text-white">&copy; Alan Blangille 2022</p>
       <div className="flex flex-row gap-2">
         {LINKS.map((value, index) => {
           return (
@@ -20,7 +20,7 @@ const Footer = () => {
               onClick={() => window.open(value.link, "_blank")}
             >
               <i
-                className={value.icon + " text-color"}
+                className={value.icon + " text-white"}
                 style={{ fontSize: "2em" }}
               ></i>
             </Button>
