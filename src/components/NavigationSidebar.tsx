@@ -73,7 +73,7 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           return (
             <Button
               key={index}
-              className="font-bold p-button-outlined w-14rem"
+              className="font-bold p-button-raised p-button-text w-14rem"
               label={value.label}
               onClick={() => handleClick(value.section)}
             >
