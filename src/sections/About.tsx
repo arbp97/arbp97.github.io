@@ -3,12 +3,10 @@ import { IMG_PATH } from "../config";
 import { Image } from "primereact/image";
 import { Divider } from "primereact/divider";
 import { Button } from "primereact/button";
-import { useThemeContext } from "../context/ThemeContext";
 import useObserver from "../hooks/useObserver";
 import { useRef } from "react";
 
 const About = () => {
-  const { currentTheme } = useThemeContext();
   const domRef = useRef<any>();
   const isVisible = useObserver(domRef);
 
@@ -16,8 +14,7 @@ const About = () => {
     <section
       id="about"
       className={
-        "flex flex-column align-items-center pb-8 " +
-        (currentTheme ? "bg-bluegray-900" : "bg-primary-100") +
+        "flex flex-column align-items-center pb-8 bg-bluegray-900" +
         (isVisible ? " fadein animation-duration-1000" : " opacity-0")
       }
     >

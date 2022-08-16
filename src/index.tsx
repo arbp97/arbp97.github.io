@@ -1,5 +1,5 @@
 import "./styles/index.css";
-// main theme imported in index.html
+import "primereact/resources/themes/arya-blue/theme.css";
 import "primereact/resources/primereact.min.css"; //core css
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";

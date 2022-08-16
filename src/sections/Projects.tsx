@@ -1,4 +1,3 @@
-import { useThemeContext } from "../context/ThemeContext";
 import { PROJECTS } from "../data/projects";
 import { IMG_PATH } from "../config";
 import { Galleria } from "primereact/galleria";
@@ -9,7 +8,6 @@ import { useRef } from "react";
 import useObserver from "../hooks/useObserver";
 
 const Projects = () => {
-  const { currentTheme } = useThemeContext();
   const ref = useRef<any>(null);
   const isVisible = useObserver(ref);
 
@@ -21,8 +19,7 @@ const Projects = () => {
     <section
       id="projects"
       className={
-        "flex flex-column justify-content-center align-items-center gap-4 pb-8" +
-        (currentTheme ? " bg-bluegray-900" : " bg-primary-100")
+        "flex flex-column justify-content-center align-items-center gap-4 pb-8 bg-bluegray-900"
       }
     >
       <p ref={ref} className="text-5xl font-bold mt-0 mb-8 text-primary">

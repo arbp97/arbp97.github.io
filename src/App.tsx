@@ -8,7 +8,6 @@ import { ScrollTop } from "primereact/scrolltop";
 import { Button } from "primereact/button";
 import PrimeReact from "primereact/api";
 import { useState } from "react";
-import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
@@ -16,32 +15,30 @@ const App = () => {
 
   return (
     <div className="bg-primary-reverse">
-      <ThemeProvider>
-        <NavigationSidebar
-          visibleSidebar={visibleSidebar}
-          setVisibleSidebar={setVisibleSidebar}
-        />
-        <Button
-          className={visibleSidebar ? "border-none hidden" : "border-none"}
-          onClick={() => setVisibleSidebar(true)}
-          style={{
-            position: "fixed",
-            paddingLeft: ".5em",
-            paddingRight: ".5em",
-            top: "25%",
-            right: "0",
-            zIndex: 1000,
-          }}
-        >
-          <i className="pi pi-chevron-left" style={{ fontSize: "2em" }}></i>
-        </Button>
-        <Landing />
-        <About />
-        <Skills />
-        <Projects />
-        <Footer />
-        <ScrollTop threshold={200} />
-      </ThemeProvider>
+      <NavigationSidebar
+        visibleSidebar={visibleSidebar}
+        setVisibleSidebar={setVisibleSidebar}
+      />
+      <Button
+        className={visibleSidebar ? "border-none hidden" : "border-none"}
+        onClick={() => setVisibleSidebar(true)}
+        style={{
+          position: "fixed",
+          paddingLeft: ".5em",
+          paddingRight: ".5em",
+          top: "25%",
+          right: "0",
+          zIndex: 1000,
+        }}
+      >
+        <i className="pi pi-chevron-left" style={{ fontSize: "2em" }}></i>
+      </Button>
+      <Landing />
+      <About />
+      <Skills />
+      <Projects />
+      <Footer />
+      <ScrollTop threshold={200} />
     </div>
   );
 };
