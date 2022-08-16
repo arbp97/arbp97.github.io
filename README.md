@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# arbp97.github.io
+
+![TypeScript](https://img.shields.io/badge/-TypeScript-007acc?style=for-the-badge&logo=typescript&logoColor=333)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Primereact](https://img.shields.io/badge/-PRIMEREACT-grey?style=for-the-badge&logo=react)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
