@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 code {
@@ -21,6 +20,7 @@ section {
   height: fit-content;
   width: 100%;
   padding: 1em;
+  overflow-x: hidden;
 }
 
 #landing {
