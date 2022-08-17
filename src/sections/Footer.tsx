@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <Image src={IMG_PATH + "logo-light.png"} width="64" />
       <p className="text-xs text-white">&copy; Alan Blangille 2022</p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-1">
         {LINKS.map((value, index) => {
           return (
             <Button
@@ -20,7 +20,7 @@ const Footer = () => {
               onClick={() => window.open(value.link, "_blank")}
             >
               <i
-                className={value.icon + " text-white"}
+                className={value.icon + " text-primary"}
                 style={{ fontSize: "2em" }}
               ></i>
             </Button>

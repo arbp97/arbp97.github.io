@@ -1,5 +1,6 @@
 .p-sidebar {
   border: none;
+  backdrop-filter: blur(1.5rem);
 }
 
 .p-sidebar-content {

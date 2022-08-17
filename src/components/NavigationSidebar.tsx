@@ -31,8 +31,8 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
     <Sidebar
       visible={visibleSidebar}
       position="right"
-      blockScroll={true}
       showCloseIcon={false}
+      className="bg-black-alpha-30"
       style={{ width: "16em" }}
       onHide={() => setVisibleSidebar(false)}
     >
@@ -55,11 +55,14 @@ const NavigationSidebar = ({ visibleSidebar, setVisibleSidebar }: Props) => {
           return (
             <Button
               key={index}
-              className="font-bold p-button-raised p-button-text w-14rem"
+              className="text-color p-button-raised p-button-text w-14rem"
               label={value.label}
               onClick={() => handleClick(value.section)}
             >
-              <i className={value.icon} style={{ fontSize: "1.5em" }}></i>
+              <i
+                className={value.icon + " text-primary"}
+                style={{ fontSize: "1.5em" }}
+              ></i>
             </Button>
           );
         })}

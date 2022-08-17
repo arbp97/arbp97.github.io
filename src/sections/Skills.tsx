@@ -37,7 +37,7 @@ const Skills = () => {
           return (
             <div
               key={index}
-              className="p-ripple col-12 lg:col-2 flex flex-row justify-content-center align-items-center gap-4 shadow-2"
+              className="p-ripple col-10 md:col-4 lg:col-2 flex flex-row justify-content-center align-items-center gap-4 shadow-2"
             >
               <Image src={IMG_PATH + value.image} width="32"></Image>
               <p className="text-color font-bold">{value.name}</p>

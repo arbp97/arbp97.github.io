@@ -34,7 +34,7 @@ section {
 }
 
 #projects {
-  padding-top: 24rem;
+  padding-top: 16rem;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%);
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%);
 }

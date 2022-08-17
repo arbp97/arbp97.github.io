@@ -14,14 +14,16 @@ const About = () => {
     <section
       id="about"
       className={
-        "flex flex-column align-items-center pb-8 bg-bluegray-900" +
+        "flex flex-column align-items-center pb-8 pt-8 bg-bluegray-900" +
         (isVisible ? " fadein animation-duration-1000" : " opacity-0")
       }
     >
-      <p className="text-5xl font-bold mt-0 mb-8 text-primary">ABOUT ME</p>
+      <p className="text-5xl text-center font-bold mt-0 mb-8 text-primary">
+        ABOUT ME
+      </p>
       <div
         ref={domRef}
-        className="flex flex-column sm:flex-row justify-content-center align-items-center gap-8 w-11 mb-8"
+        className="flex flex-column md:flex-row justify-content-center align-items-center gap-8 w-11 mb-8"
       >
         <Image
           className="black-white-filter"
