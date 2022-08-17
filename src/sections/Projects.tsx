@@ -35,7 +35,7 @@ const Projects = () => {
               className={
                 "w-full lg:w-3 h-auto flex flex-column gap-1" +
                 (isVisible
-                  ? " fadeinleft animation-duration-500"
+                  ? " fadeinleft animation-duration-1000"
                   : " opacity-0")
               }
             >
@@ -72,7 +72,7 @@ const Projects = () => {
               className={
                 "w-full lg:w-6" +
                 (isVisible
-                  ? " fadeinright animation-duration-500"
+                  ? " fadeinright animation-duration-1000"
                   : " opacity-0")
               }
               value={value.files.map((element) => ({
