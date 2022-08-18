@@ -29,6 +29,14 @@ export const PROJECTS = [
     stack: ["Typescript", "React", "CSS"],
   },
   {
+    name: "ASP.NET Web API",
+    description:
+      "REST API built following the Clean Architecture design, using tools such as Fluent Validation and MediatR to manage and validate requests.",
+    files: ["projects/api-1.png"],
+    link: "https://github.com/arbp97/clean-architecture-api",
+    stack: ["C#", ".NET", "SQL Server"],
+  },
+  {
     name: "BTree View",
     description:
       "Desktop Application that helps you build and visualize binary trees, make use of various arrangement methods. Also includes AVL tree auto-balancing.",
