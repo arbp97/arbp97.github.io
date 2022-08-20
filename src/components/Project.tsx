@@ -20,7 +20,30 @@ const Project = ({ name, description, stack, files, live, link }: Props) => {
   const isVisible = useObserver(ref);
 
   const itemTemplate = (item: any) => {
-    return <Image src={IMG_PATH + item.src} alt={""} width="100%" preview />;
+    return (
+      <Image
+        src={IMG_PATH + item.src}
+        alt={""}
+        width="100%"
+        preview
+        onShow={() => {
+          const element = document.getElementsByClassName(
+            "p-image-mask p-component-overlay p-component-overlay-enter"
+          );
+          const child = document.createElement("i");
+          child.id = "tempChild";
+          child.classList.add("pi");
+          child.classList.add("pi-check");
+          child.classList.add("text-red-600");
+          child.style.fontSize = "2em";
+          child.style.position = "fixed";
+          child.style.right = "20%";
+          child.style.top = "50%";
+          child.style.zIndex = "7000";
+          element[0].appendChild(child);
+        }}
+      />
+    );
   };
 
   return (
@@ -66,8 +89,9 @@ const Project = ({ name, description, stack, files, live, link }: Props) => {
           "w-full lg:w-6" +
           (isVisible ? " fadeinright animation-duration-500" : " opacity-0")
         }
-        value={files.map((element) => ({
+        value={files.map((element, index) => ({
           src: element,
+          index: index,
         }))}
         item={itemTemplate}
         style={{ maxWidth: "768px" }}
