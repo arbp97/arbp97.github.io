@@ -13,6 +13,7 @@ const Projects = () => {
       {PROJECTS.map((value, index) => {
         return (
           <Project
+            id={String(index)}
             key={index}
             name={value.name}
             description={value.description}
