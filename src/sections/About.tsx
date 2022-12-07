@@ -44,7 +44,7 @@ const About = () => {
             <span className="p-tag border-1 border-white">Work</span>
           </Divider>
           <span>
-            I'm currently working as a trainee software developer at{" "}
+            I'm currently working as a Jr. Software Developer at{" "}
             <span className="text-red-600">Andreani Grupo Logístico</span>.
           </span>
           <Divider align="right">
