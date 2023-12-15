@@ -44,15 +44,15 @@ const About = () => {
             <span className="p-tag border-1 border-white">Work</span>
           </Divider>
           <span>
-            I'm currently working as a Jr. Software Developer at{" "}
+            I'm currently working as a Jr. Backend Software Developer at{" "}
             <span className="text-red-600">Andreani Grupo Logístico</span>.
           </span>
           <Divider align="right">
             <span className="p-tag border-1 border-white">Future</span>
           </Divider>
           <span>
-            My current objectives are to finish my degree at University and keep
-            on pushing my limits{" "}
+            My current objective is to keep on learning, working
+            and pushing my limits{" "}
             <span className="text-blue-600">one line of code at a time</span>.
           </span>
           <div className="flex flex-row gap-2 mt-6">
