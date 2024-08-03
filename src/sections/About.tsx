@@ -35,8 +35,7 @@ const About = () => {
             <span className="p-tag border-1 border-white">Myself</span>
           </Divider>
           <span>
-            I'm 23 years old and I am from Argentina. At this moment I find
-            myself studying Computer Systems at{" "}
+            I'm 24 years old and I am from Argentina. I studied Computer Science at{" "}
             <span className="text-pink-600">Universidad Nacional de Lanús</span>
             .
           </span>
@@ -44,7 +43,7 @@ const About = () => {
             <span className="p-tag border-1 border-white">Work</span>
           </Divider>
           <span>
-            I'm currently working as a Jr. Backend Software Developer at{" "}
+            I'm currently working as a Ssr. Backend Software Developer at{" "}
             <span className="text-red-600">Andreani Grupo Logístico</span>.
           </span>
           <Divider align="right">
