@@ -15,7 +15,7 @@ const Landing = () => {
             Hi, my name is{" "}
             <span className="text-green-600">Alan Blangille</span>
           </p>
-          <p className="m-1">I'm a Web Developer.</p>
+          <p className="m-1">I'm a Software Developer.</p>
         </div>
         <div
           className="fadein animation-duration-2000 mt-8"

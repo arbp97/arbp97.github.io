@@ -1,4 +1,3 @@
-import { IMG_PATH } from "../config";
 import { SKILLS } from "../data/skills";
 import { Image } from "primereact/image";
 import { Ripple } from "primereact/ripple";
@@ -25,11 +24,10 @@ const Skills = () => {
           TECHNOLOGIES AND TOOLS
         </span>
         <p className="text-xl mt-5 line-height-4 text-color">
-          Using a combination of{" "}
-          <span className="text-red-600">cutting-edge</span> technologies and
-          reliable <span className="text-green-600">open-source software</span>{" "}
-          I can build user-focused, performant apps and websites for every
-          platform.
+          Using modern server-side technologies and robust open-source tools, I
+          build <span className="text-red-600">scalable</span>, secure, and{" "}
+          <span className="text-green-600">high-performance</span> backend
+          systems that power seamless experiences across all platforms.
         </p>
       </div>
       <div className="grid gap-4 mt-6 w-full lg:w-10 justify-content-center">
@@ -39,7 +37,7 @@ const Skills = () => {
               key={index}
               className="p-ripple col-10 md:col-4 lg:col-2 flex flex-row justify-content-center align-items-center gap-4 shadow-2"
             >
-              <Image src={IMG_PATH + value.image} width="32"></Image>
+              <Image src={value.image} width="48"></Image>
               <p className="text-color font-bold">{value.name}</p>
               <Ripple />
             </div>

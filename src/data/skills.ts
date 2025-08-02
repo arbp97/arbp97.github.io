@@ -1,62 +1,47 @@
 export const SKILLS = [
   {
-    name: "Javascript",
-    image: "skills/js.png",
-  },
-  {
-    name: "Typescript",
-    image: "skills/ts.png",
-  },
-  {
-    name: "React",
-    image: "skills/react.png",
-  },
-  {
-    name: "HTML5",
-    image: "skills/html-5.png",
-  },
-  {
-    name: "CSS3",
-    image: "skills/css-3.png",
-  },
-  {
-    name: "C",
-    image: "skills/c.png",
-  },
-  {
-    name: "C++",
-    image: "skills/cpp.png",
-  },
-  {
     name: "C#",
-    image: "skills/c-sharp.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg",
   },
   {
     name: ".NET",
-    image: "skills/net.svg",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
   },
   {
-    name: "Java",
-    image: "skills/java.png",
+    name: "Microsoft Orleans",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-line.svg",
   },
   {
-    name: "Spring",
-    image: "skills/spring.png",
-  },
-  {
-    name: "SQL",
-    image: "skills/sql.png",
+    name: "SQL Server",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
   },
   {
     name: "MongoDB",
-    image: "skills/mongodb.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "Apache Kafka",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg",
   },
   {
     name: "Git",
-    image: "skills/git.svg",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
   },
   {
     name: "Linux",
-    image: "skills/linux.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+  },
+  {
+    name: "Docker",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
   },
 ];

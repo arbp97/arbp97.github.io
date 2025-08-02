@@ -10,7 +10,7 @@ const Footer = () => {
       className="flex flex-column justify-content-center align-items-center gap-3 bg-gray-800"
     >
       <Image src={IMG_PATH + "logo-light.png"} width="64" />
-      <p className="text-xs text-white">&copy; Alan Blangille 2022</p>
+      <p className="text-xs text-white">&copy; Alan Blangille 2025</p>
       <div className="flex flex-row gap-1">
         {LINKS.map((value, index) => {
           return (

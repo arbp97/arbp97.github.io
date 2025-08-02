@@ -26,7 +26,7 @@ const About = () => {
         className="flex flex-column md:flex-row justify-content-center align-items-center gap-8 w-11 mb-8"
       >
         <Image
-          className="black-white-filter"
+          className="about-photo"
           src={IMG_PATH + "personal.png"}
           width="340"
         ></Image>
@@ -35,7 +35,8 @@ const About = () => {
             <span className="p-tag border-1 border-white">Myself</span>
           </Divider>
           <span>
-            I'm 24 years old and I am from Argentina. I studied Computer Science at{" "}
+            I'm {new Date().getFullYear() - 2000} years old and I am from
+            Argentina. I studied Computer Science at{" "}
             <span className="text-pink-600">Universidad Nacional de Lanús</span>
             .
           </span>
@@ -50,8 +51,8 @@ const About = () => {
             <span className="p-tag border-1 border-white">Future</span>
           </Divider>
           <span>
-            My current objective is to keep on learning, working
-            and pushing my limits{" "}
+            My current objective is to keep on learning, working and pushing my
+            limits{" "}
             <span className="text-blue-600">one line of code at a time</span>.
           </span>
           <div className="flex flex-row gap-2 mt-6">
