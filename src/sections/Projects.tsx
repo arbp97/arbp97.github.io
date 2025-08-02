@@ -24,6 +24,14 @@ const Projects = () => {
           />
         );
       })}
+      <a
+        href="https://github.com/arbp97"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 text-lg text-primary underline"
+      >
+        See more projects on GitHub
+      </a>
     </section>
   );
 };

@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     name: "Saint Patrick Homebanking",
     description:
-      "Web App that simulates an E-Wallet, focused on money transactions in multiple currencies and account information. Demo Credentials: anarod@gmail.com BushidoTrooper123",
+      "Web App that simulates an E-Wallet, focused on money transactions in multiple currencies and account information. Demo Credentials in repo.",
     files: [
       "projects/st-patrick-2.png",
       "projects/st-patrick-1.png",
@@ -11,7 +11,7 @@ export const PROJECTS = [
     ],
     link: "https://github.com/arbp97/hb-api/",
     live: "https://home-banking-psi.vercel.app/",
-    stack: ["Javascript", "React", "Express", "MongoDB"],
+    stack: ["Javascript", "React", "Node", "MongoDB"],
   },
   {
     name: "McDonald's App Clone",
@@ -29,19 +29,16 @@ export const PROJECTS = [
     stack: ["Typescript", "React", "CSS"],
   },
   {
-    name: "ASP.NET Web API",
+    name: "This Page!",
     description:
-      "REST API built following the Clean Architecture design, using tools such as Fluent Validation and MediatR to manage and validate requests.",
-    files: ["projects/api-1.png"],
-    link: "https://github.com/arbp97/clean-architecture-api",
-    stack: ["C#", ".NET", "SQL Server"],
-  },
-  {
-    name: "BTree View",
-    description:
-      "Desktop Application that helps you build and visualize binary trees, make use of various arrangement methods. Also includes AVL tree auto-balancing.",
-    files: ["projects/btree-view.png"],
-    link: "https://github.com/arbp97/btree-view",
-    stack: ["C", "GTK 3", "Glade"],
+      "This portfolio page is built with React, TypeScript, and PrimeReact. It showcases my skills, projects, and experience in web development.",
+    files: [
+      "projects/landing-1.png",
+      "projects/landing-2.png",
+      "projects/landing-3.png",
+    ],
+    link: "https://github.com/arbp97/arbp97.github.io",
+    live: "https://alanblangille.pro/",
+    stack: ["Typescript", "React", "PrimeReact", "TailwindCSS"],
   },
 ];
