@@ -11,9 +11,14 @@ code {
   font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.black-white-filter {
-  filter: grayscale(100%) contrast(120%);
-  -webkit-filter: grayscale(100%) contrast(120%);
+.about-photo {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+  transform: scale(1.03);
 }
 
 section {
