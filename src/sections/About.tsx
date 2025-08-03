@@ -1,6 +1,5 @@
 import "../styles/divider.overrides.css";
 import { IMG_PATH } from "../config";
-import { Image } from "primereact/image";
 import { Divider } from "primereact/divider";
 import { Button } from "primereact/button";
 import useObserver from "../hooks/useObserver";
@@ -25,11 +24,12 @@ const About = () => {
         ref={domRef}
         className="flex flex-column md:flex-row justify-content-center align-items-center gap-8 w-11 mb-8"
       >
-        <Image
-          className="about-photo"
+        <img
           src={IMG_PATH + "personal.png"}
+          className="object-cover photo"
           width="340"
-        ></Image>
+          alt="Alan Blangille"
+        />
         <div className="text-color text-xl line-height-4">
           <Divider align="left">
             <span className="p-tag border-1 border-white">Myself</span>

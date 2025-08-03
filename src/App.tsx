@@ -8,6 +8,7 @@ import { ScrollTop } from "primereact/scrolltop";
 import { Button } from "primereact/button";
 import PrimeReact from "primereact/api";
 import { useState } from "react";
+import Experience from "./sections/Experience";
 
 const App = () => {
   const [visibleSidebar, setVisibleSidebar] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
       <Landing />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Footer />
       <ScrollTop threshold={200} />

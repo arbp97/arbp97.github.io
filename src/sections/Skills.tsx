@@ -12,7 +12,7 @@ const Skills = () => {
     <section
       id="skills"
       className={
-        "flex flex-column justify-content-center align-items-center bg-primary-reverse pb-8" +
+        "flex flex-column justify-content-center align-items-center bg-primary-reverse pb-2" +
         (isVisible ? " fadein animation-duration-1000" : " opacity-0")
       }
     >
@@ -35,7 +35,7 @@ const Skills = () => {
           return (
             <div
               key={index}
-              className="p-ripple col-10 md:col-4 lg:col-2 flex flex-row justify-content-center align-items-center gap-4 shadow-2"
+              className="p-ripple col-10 md:col-4 lg:col-2 flex flex-row justify-content-center align-items-center gap-4 shadow-4"
             >
               <Image src={value.image} width="48"></Image>
               <p className="text-color font-bold">{value.name}</p>

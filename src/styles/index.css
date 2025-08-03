@@ -11,13 +11,13 @@ code {
   font-family: "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.about-photo {
+.photo {
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-.about-photo:hover {
+.photo:hover {
   transform: scale(1.03);
 }
 
@@ -42,6 +42,10 @@ section {
   padding-top: 16rem;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%);
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%);
+}
+
+#experience {
+  padding-top: 8rem;
 }
 
 #footer {
