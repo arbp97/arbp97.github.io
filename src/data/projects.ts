@@ -33,12 +33,12 @@ export const PROJECTS = [
     description:
       "This portfolio page is built with React, TypeScript, and PrimeReact. It showcases my skills, projects, and experience in web development.",
     files: [
-      "projects/landing-1.png",
-      "projects/landing-2.png",
-      "projects/landing-3.png",
+      "projects/landing-1.PNG",
+      "projects/landing-2.PNG",
+      "projects/landing-3.PNG",
     ],
     link: "https://github.com/arbp97/arbp97.github.io",
     live: "https://alanblangille.pro/",
-    stack: ["Typescript", "React", "PrimeReact", "TailwindCSS"],
+    stack: ["Typescript", "React", "PrimeReact"],
   },
 ];
